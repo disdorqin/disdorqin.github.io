@@ -1,0 +1,22 @@
+# build output
+dist/
+# astro generated types
+.astro/
+# dependencies
+node_modules/
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# environment
+.env
+.env.production
+# macOS
+.DS_Store
+# editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+# pagefind index（构建产物，由 CI 重新生成）
+pagefind/

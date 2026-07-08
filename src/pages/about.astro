@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../config/site';
+const githubUrl = `https://github.com/${SITE.githubUsername}`;
+const repoUrl = `https://github.com/${SITE.githubUsername}/${SITE.githubUsername}.github.io`;
+---
+
+<BaseLayout title="关于" description={`关于 ${SITE.author} 与 ${SITE.title}`}>
+  <div class="container prose">
+    <h1 class="page-title">关于</h1>
+    <p>你好，我是 <strong>{SITE.author}</strong>。这里是我的个人博客 <strong>{SITE.title}</strong>。</p>
+
+    <p>{SITE.description}。我主要从事科研工作，关注电力负荷与新能源功率预测，也会折腾机器学习模型，并把过程中的项目日志、实验笔记和 Vibe Coding 的灵感随手记录下来。</p>
+
+    <h2>这个博客写什么</h2>
+    <ul>
+      <li><strong>科研笔记</strong>：读论文、做实验、整理方法论。</li>
+      <li><strong>电力预测</strong>：负荷预测、新能源功率预测、时序建模。</li>
+      <li><strong>机器学习</strong>：模型、特征工程、训练技巧与踩坑记录。</li>
+      <li><strong>项目日志</strong>：正在推进的工程项目与进度。</li>
+      <li><strong>Vibe Coding</strong>：用 AI 协作编程的实验场与心得。</li>
+      <li><strong>杂谈</strong>：工具、效率、读书与随笔。</li>
+    </ul>
+
+    <h2>技术栈</h2>
+    <p>本站基于 <a href="https://astro.build" target="_blank" rel="noopener">Astro</a> + TypeScript 构建，内容使用 Markdown/MDX 内容集合管理，后台编辑由 <a href="https://pagescms.org" target="_blank" rel="noopener">Pages CMS</a> 提供，部署在 GitHub Pages，评论使用 <a href="https://giscus.app" target="_blank" rel="noopener">Giscus</a>。</p>
+
+    <h2>联系我</h2>
+    <ul>
+      <li>GitHub：<a href={githubUrl} target="_blank" rel="noopener">{githubUrl}</a></li>
+      <li>源码仓库：<a href={repoUrl} target="_blank" rel="noopener">{repoUrl}</a></li>
+      <li>留言板：<a href="/guestbook/">/guestbook/</a></li>
+    </ul>
+
+    <p style="color:var(--text-muted)">欢迎在留言板或通过 GitHub 与我交流。</p>
+  </div>
+</BaseLayout>

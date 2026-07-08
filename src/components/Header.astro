@@ -1,0 +1,48 @@
+---
+import { SITE } from '../config/site';
+import ThemeToggle from './ThemeToggle.astro';
+
+const path = Astro.url.pathname;
+function isActive(href: string): boolean {
+  if (href === '/') return path === '/';
+  return path === href || path.startsWith(href);
+}
+---
+
+<header class="site-header">
+  <div class="container-wide site-header__inner">
+    <a class="brand" href="/">
+      <span class="brand__dot"></span>
+      <span>{SITE.title}</span>
+    </a>
+
+    <button
+      class="nav__toggle theme-toggle"
+      id="nav-toggle"
+      aria-label="切换菜单"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav class="nav" id="nav">
+      {
+        SITE.nav.map((item) => (
+          <a href={item.href} aria-current={isActive(item.href) ? 'page' : undefined}>
+            {item.label}
+          </a>
+        ))
+      }
+      <ThemeToggle />
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const nav = document.getElementById('nav');
+  toggle?.addEventListener('click', () => {
+    const open = nav?.classList.toggle('is-open');
+    toggle.setAttribute('aria-expanded', String(!!open));
+  });
+</script>

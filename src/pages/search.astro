@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="搜索" description="搜索全站文章">
+  <div class="container">
+    <h1 class="page-title">搜索</h1>
+    <p class="page-subtitle">基于 Pagefind 的全文搜索。</p>
+
+    <div id="search"></div>
+
+    <p style="color:var(--text-muted);font-size:.85rem;margin-top:1.2rem">
+      提示：本地 <code>npm run dev</code> 时搜索索引尚未生成，搜索会在
+      <code>npm run build</code> 部署到 GitHub Pages 后生效。
+    </p>
+  </div>
+
+  <!-- Pagefind UI：构建后由 pagefind 生成 /pagefind/ 资源 -->
+  <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
+  <script src="/pagefind/pagefind-ui.js" is:inline></script>
+  <script is:inline>
+    window.addEventListener('DOMContentLoaded', function () {
+      if (window.PagefindUI) {
+        new window.PagefindUI({ element: '#search', showSubResults: true });
+      }
+    });
+  </script>
+</BaseLayout>

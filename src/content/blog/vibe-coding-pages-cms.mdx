@@ -1,0 +1,39 @@
+---
+title: Vibe Coding：用 AI 协作搭一个写作后台
+description: 不手写 Markdown 的前提下，如何用 Pages CMS + GitHub Actions 把内容发布流水线完全托管起来。
+pubDate: 2026-07-06
+category: Vibe Coding
+tags:
+  - Vibe Coding
+  - Pages CMS
+  - 自动化
+draft: false
+pinned: false
+---
+
+## 什么是 Vibe Coding
+
+不是「让 AI 写全部代码然后跑路」，而是把**重复性决策**交给协作式 AI：脚手架、样板、部署配置一次性生成，人专注于产品判断。
+
+本篇演示一个典型场景：让非工程同学也能发博客。
+
+## 工作流
+
+1. 在 Pages CMS 后台新建文章，填标题/摘要/分类/标签，上传封面；
+2. 保存 → 内容以 Markdown 提交到 `main` 分支；
+3. GitHub Actions 构建并部署到 GitHub Pages；
+4. 评论由 Giscus 托管在 GitHub Discussions。
+
+现在是 <strong>{new Date().getFullYear()}</strong> 年，这条句子由 MDX 的表达式 `{new Date().getFullYear()}` 在构建时渲染——说明内容集合支持 **MDX**，可嵌入表达式与组件。
+
+## 收益
+
+- 写作与代码解耦，谁都能发；
+- 版本历史天然在 Git 里；
+- 部署零点击。
+
+> Vibe Coding 的底线：AI 生成的每一步你都要能解释，否则就是技术债。
+
+## 小结
+
+把「写文章」变成「填表单 + 点保存」，是把 Vibe Coding 用在内容运营上的最小可行实践。

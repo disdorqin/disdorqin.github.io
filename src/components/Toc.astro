@@ -1,0 +1,27 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+const { headings } = Astro.props;
+// 仅保留 h2–h4，避免目录过深
+const items = headings.filter((h) => h.depth >= 2 && h.depth <= 4);
+---
+
+{
+  items.length > 0 && (
+    <aside class="toc-wrap">
+      <nav class="toc" aria-label="文章目录">
+        <p class="toc__title">目录</p>
+        <ul>
+          {items.map((h) => (
+            <li class={`lvl-${h.depth}`}>
+              <a href={`#${h.slug}`}>{h.text}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </aside>
+  )
+}

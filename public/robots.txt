@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://disdorqin.github.io/sitemap-index.xml

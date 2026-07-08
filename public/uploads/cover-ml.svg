@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e1014"/>
+      <stop offset="1" stop-color="#1a1626"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g stroke="#8b9cf7" stroke-width="2.5" fill="none" opacity="0.8">
+    <circle cx="400" cy="315" r="120"/>
+    <circle cx="800" cy="315" r="120"/>
+    <line x1="480" y1="280" x2="720" y2="280"/>
+    <line x1="480" y1="350" x2="720" y2="350"/>
+    <line x1="400" y1="195" x2="800" y2="435"/>
+    <line x1="400" y1="435" x2="800" y2="195"/>
+  </g>
+  <g fill="#8b9cf7">
+    <circle cx="400" cy="315" r="9"/><circle cx="800" cy="315" r="9"/>
+  </g>
+  <text x="80" y="120" fill="#d8dbe2" font-family="'JetBrains Mono',monospace" font-size="54" font-weight="800">机器学习</text>
+  <text x="84" y="170" fill="#939bad" font-family="-apple-system,sans-serif" font-size="26">Models · features · training</text>
+</svg>

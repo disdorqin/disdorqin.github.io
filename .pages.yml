@@ -1,0 +1,64 @@
+# Pages CMS 配置
+# 文档：https://pagescms.org/docs
+# 该文件字段与 src/content.config.ts 的 frontmatter schema 一一对应。
+
+# —— 媒体（封面图 / 正文插图）——
+# input：仓库中存放文件的目录
+# output：写入内容时的公开 URL 前缀
+# rename: safe → 文件名自动 slug 化，避免中文/空格导致路径问题
+# extensions：允许的图片格式
+media:
+  input: public/uploads
+  output: /uploads
+  rename: safe
+  extensions: [png, jpg, jpeg, webp, gif]
+
+# —— 内容集合 ——
+content:
+  - name: posts
+    label: 文章
+    type: collection
+    path: src/content/blog
+    format: yaml-frontmatter
+    view:
+      primary: title
+      sort: pubDate
+      order: desc
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: description
+        label: 摘要
+        type: text
+        required: true
+      - name: pubDate
+        label: 发布日期
+        type: date
+        required: true
+      - name: updatedDate
+        label: 更新日期
+        type: date
+      - name: category
+        label: 分类
+        type: select
+        required: true
+        options:
+          values: [科研笔记, 电力预测, 机器学习, 项目日志, Vibe Coding, 杂谈]
+      - name: tags
+        label: 标签
+        type: string
+        list: true
+      - name: cover
+        label: 封面图
+        type: image
+      - name: draft
+        label: 草稿
+        type: boolean
+      - name: pinned
+        label: 置顶
+        type: boolean
+      - name: body
+        label: 正文
+        type: rich-text

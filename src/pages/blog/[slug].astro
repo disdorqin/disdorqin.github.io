@@ -1,0 +1,101 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Toc from '../../components/Toc.astro';
+import GiscusComment from '../../components/GiscusComment.astro';
+import { getPublishedPosts, type Post } from '../../utils/posts';
+import { formatDate, readingTime, encodeParam } from '../../utils';
+
+export async function getStaticPaths() {
+  const posts = await getPublishedPosts();
+  return posts.map((post, i) => {
+    const older = i + 1 < posts.length ? posts[i + 1] : null; // 上一篇（更早）
+    const newer = i - 1 >= 0 ? posts[i - 1] : null; // 下一篇（更晚）
+    return {
+      params: { slug: post.id },
+      props: { post, older, newer },
+    };
+  });
+}
+
+interface Props {
+  post: Post;
+  older: Post | null;
+  newer: Post | null;
+}
+const { post, older, newer } = Astro.props;
+const { Content, headings } = await render(post);
+const { title, description, pubDate, updatedDate, category, tags, cover } = post.data;
+const minutes = readingTime(post.body ?? description);
+---
+
+<BaseLayout title={title} description={description} image={cover} type="article">
+  <div class="container">
+    <article>
+      <header class="article-header">
+        <div class="article-meta">
+          <time datetime={pubDate.toISOString()}>发布于 {formatDate(pubDate)}</time>
+          {
+            updatedDate && (
+              <span>· 更新于 {formatDate(updatedDate)}</span>
+            )
+          }
+          <span>· {minutes} 分钟阅读</span>
+          {post.data.pinned && <span class="badge badge--accent">置顶</span>}
+        </div>
+        <h1 class="article-header__title" data-pagefind-meta="title">{title}</h1>
+        <div class="article-meta">
+          <a class="badge badge--accent" href={`/categories/${encodeParam(category)}/`}>{category}</a>
+          {
+            tags.map((t) => (
+              <a class="badge" href={`/tags/${encodeParam(t)}/`}>#{t}</a>
+            ))
+          }
+        </div>
+      </header>
+
+      {
+        cover && (
+          <img class="article-cover" src={cover} alt={title} />
+        )
+      }
+
+      <div class="article-layout">
+        <div class="prose" data-pagefind-body>
+          <Content />
+        </div>
+        <Toc headings={headings} />
+      </div>
+
+      <!-- 上一篇 / 下一篇 -->
+      <nav class="pager">
+        {
+          older ? (
+            <a class="prev" href={`/blog/${older.id}/`}>
+              <div class="pager__dir">← 上一篇</div>
+              <div class="pager__title">{older.data.title}</div>
+            </a>
+          ) : (
+            <span />
+          )
+        }
+        {
+          newer ? (
+            <a class="next" href={`/blog/${newer.id}/`}>
+              <div class="pager__dir">下一篇 →</div>
+              <div class="pager__title">{newer.data.title}</div>
+            </a>
+          ) : (
+            <span />
+          )
+        }
+      </nav>
+
+      <!-- Giscus 评论区 -->
+      <section style="margin-top:3rem">
+        <h2 class="section__title" style="font-size:1.15rem;margin-bottom:1rem">评论</h2>
+        <GiscusComment />
+      </section>
+    </article>
+  </div>
+</BaseLayout>

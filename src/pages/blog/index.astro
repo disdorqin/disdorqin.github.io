@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PostCard from '../../components/PostCard.astro';
+import { getPublishedPosts } from '../../utils/posts';
+
+const posts = await getPublishedPosts();
+---
+
+<BaseLayout title="博客" description="全部文章列表">
+  <div class="container">
+    <h1 class="page-title">博客</h1>
+    <p class="page-subtitle">共 {posts.length} 篇文章 · 置顶优先 · 按发布时间倒序</p>
+
+    {posts.map((post) => <PostCard post={post} />)}
+
+    {
+      posts.length === 0 && (
+        <p style="color:var(--text-muted);margin-top:2rem">
+          还没有已发布的文章。可通过 Pages CMS 后台或提交 Markdown 文件发布。
+        </p>
+      )
+    }
+  </div>
+</BaseLayout>
