@@ -15,6 +15,7 @@ const configured = SITE.walineServerURL && SITE.walineServerURL.length > 0;
       data-meta={JSON.stringify(SITE.walineMeta)}
       data-required-meta={JSON.stringify(SITE.walineRequiredMeta)}
       data-comment-sorting={SITE.walineCommentSorting}
+      data-dark={SITE.walineDark}
     />
   ) : (
     <div class="waline-wrap waline-wrap--placeholder">
@@ -35,8 +36,6 @@ const configured = SITE.walineServerURL && SITE.walineServerURL.length > 0;
       const walineEl = document.getElementById('waline');
       if (!walineEl) throw new Error('#waline not found');
 
-      const isDark = () => document.documentElement.classList.contains('dark');
-
       async function loadWaline() {
         const { init } = await import('https://unpkg.com/@waline/client@v3/dist/waline.mjs');
 
@@ -47,7 +46,7 @@ const configured = SITE.walineServerURL && SITE.walineServerURL.length > 0;
           el: '#waline',
           serverURL: walineEl.dataset.serverUrl,
           lang: walineEl.dataset.lang || 'zh-CN',
-          dark: isDark,
+          dark: walineEl.dataset.dark,
           login: walineEl.dataset.login || 'disable',
           meta: meta.length > 0 ? meta : undefined,
           requiredMeta: requiredMeta.length > 0 ? requiredMeta : undefined,
