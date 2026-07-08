@@ -2,7 +2,7 @@
 import { render } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Toc from '../../components/Toc.astro';
-import GiscusComment from '../../components/GiscusComment.astro';
+import WalineComment from '../../components/WalineComment.astro';
 import { getPublishedPosts, type Post } from '../../utils/posts';
 import { formatDate, readingTime, encodeParam } from '../../utils';
 
@@ -91,10 +91,10 @@ const minutes = readingTime(post.body ?? description);
         }
       </nav>
 
-      <!-- Giscus 评论区 -->
-      <section style="margin-top:3rem">
-        <h2 class="section__title" style="font-size:1.15rem;margin-bottom:1rem">评论</h2>
-        <GiscusComment />
+      <!-- 评论区 -->
+      <section style="margin-top:2.5rem">
+        <h2 class="section__title" style="font-size:1.1rem;margin-bottom:1rem">评论</h2>
+        <WalineComment />
       </section>
     </article>
   </div>

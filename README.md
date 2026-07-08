@@ -2,7 +2,7 @@
 
 > 科研、电力预测、项目日志与 Vibe Coding 实验场
 
-一个基于 **Astro + TypeScript** 的个人博客，内容用 **Markdown/MDX 内容集合**管理，后台编辑交给 **Pages CMS**，部署在 **GitHub Pages**，评论用 **Giscus**。纯静态、零服务端运行时、不依赖数据库。
+一个基于 **Astro + TypeScript** 的个人博客，内容用 **Markdown/MDX 内容集合**管理，后台编辑交给 **Pages CMS**，部署在 **GitHub Pages**，评论功能支持 **Waline**（默认）与 **Giscus**（可选）。纯静态、零服务端运行时、不依赖数据库。
 
 - 站点：`https://disdorqin.cn`
 - 仓库：`disdorqin/disdorqin.github.io`
@@ -20,7 +20,9 @@
 - [自定义域名](#自定义域名)
 - [Pages CMS 使用步骤](#pages-cms-使用步骤)
 - [Pages CMS 发文检查](#pages-cms-发文检查)
-- [Giscus 配置步骤](#giscus-配置步骤)
+- [文章排序说明](#文章排序说明)
+- [Waline 配置步骤（默认评论系统）](#waline-配置步骤默认评论系统)
+- [Giscus（可选方案）](#giscus可选方案)
 - [如何写 / 发布第一篇文章](#如何写--发布第一篇文章)
 - [写作后台](#写作后台)
 - [常见问题排查](#常见问题排查)
@@ -277,14 +279,61 @@ Pages CMS 是一个跑在浏览器里的后台，读写你的 GitHub 仓库，**
 - **标签**填写多个时用回车 / 逗号分隔，保存后为数组；不要写成单段逗号字符串（会被当成 1 个标签）。
 - **封面图**：在正文或封面字段上传，文件会落到 `public/uploads/`，路径形如 `/uploads/xxx.svg`；frontmatter 里的 `cover` 自动写成 `/uploads/...`，不要改成相对路径或本地绝对路径。
 - **草稿**：勾选 `draft` 后文章线上不显示，但仍在仓库里；确定发布时取消勾选再 Save。
-- **置顶**：`pinned: true` 的文章在列表页排在最前。
+- **置顶**：`pinned: true` 的文章在首页独立"置顶"区域展示，不影响最新文章列表排序。
 - 保存即提交到 `main` → 触发 Actions 重新构建部署（通常 1–2 分钟生效）。若长时间不更新，先看 Actions 日志，再本地跑 `npm run preflight`。
 
 ---
 
-## Giscus 配置步骤
+## 文章排序说明
 
-Giscus 用 GitHub Discussions 当评论存储，无需后端。
+- **最新文章列表**（首页 / `/blog/` / 分类页 / 标签页）：严格按 **`pubDate` 倒序**排列，即最新发布的文章永远排在最前面。
+- **`pinned: true`**：置顶文章**不会插入**到最新文章列表中间，而是在首页单独显示在「置顶」区域。不影响最新文章的按日期排序逻辑。
+- **RSS 与搜索索引**也按此顺序生成，保持全站一致。
+- 所有已标记 `draft: true` 的文章在构建时被过滤，线上不可见。
+
+---
+
+## Waline 配置步骤（默认评论系统）
+
+Waline 是一个轻量评论系统，访客只需填写昵称即可评论，**不需要 GitHub 账号**。数据存储在 Waline 服务端连接的数据库中，不存放在 GitHub 仓库里。
+
+> 为什么从 Giscus 换到 Waline？因为很多访客没有 GitHub 账号，Giscus 要求 GitHub 登录才能评论，门槛太高。
+
+### 1. 部署 Waline 服务端
+
+推荐使用 **Vercel + Neon Database** 零成本部署：
+
+1. 打开 [Waline 部署文档](https://waline.js.org/guide/get-started/)，按指引一键部署到 Vercel；
+2. 创建一个 [Neon](https://neon.tech) 数据库（免费版即可），获取数据库连接字符串 `postgresql://...`；
+3. 在 Vercel 项目 Settings → Environment Variables 中配置 Waline 所需的环境变量（`LEAN_ID` / `LEAN_APPID` 或 `DATABASE_URL`，取决于你选的存储方案）；
+4. 重新部署 Vercel 项目，获得服务地址，形如 `https://xxx.vercel.app`。
+
+### 2. 注册管理员
+
+首次配置完成后，打开 `https://你的服务地址/ui/register` 注册账号。第一个注册的账号会成为管理员，可管理评论。
+
+### 3. 填写项目配置
+
+把 Waline 服务地址填入 `src/config/site.ts`：
+
+```ts
+walineServerURL: 'https://你的服务地址.vercel.app',  // ← 替换为真实地址
+```
+
+### 4. 未配置时的说明
+
+在 `walineServerURL` 为空时：
+- 文章详情页与留言板页的评论区会显示「**评论系统待配置**」提示；
+- 组件**不会**加载 Waline 脚本，也**不会**报错，不影响构建与部署；
+- 等你部署了 Waline 服务并填好 `walineServerURL` 后，刷新页面即自动启用。
+
+> 不要把数据库密码或任何 token 写进前端仓库。所有敏感信息只在 Waline 服务端环境变量中配置。
+
+---
+
+## Giscus（可选方案）
+
+Giscus 使用 GitHub Discussions 存储评论，**免费、无需额外数据库**，但访客需要 **GitHub 账号**才能评论。当前项目默认使用 Waline，如果你偏好 Giscus，可以按以下步骤启用：
 
 ### 1. 开启仓库 Discussions
 
@@ -301,31 +350,19 @@ Giscus 用 GitHub Discussions 当评论存储，无需后端。
 - Repository 填 `disdorqin/disdorqin.github.io`；
 - 选择 Discussions 分类（如 `Announcements`，需提前在 Discussions 里建好）；
 - Page ↔ Discussions 映射选 `pathname`；
-- 主题先选 `dark`；
+- 主题选 `preferred_color_scheme`；
 - 页面会给出 `data-repo-id` 与 `data-category-id` 等参数。
 
-### 4. 替换项目中的配置
+### 4. 切换评论系统
 
-把生成的值填进 `src/config/site.ts`：
+要把评论从 Waline 切回 Giscus：
 
-```ts
-giscusRepo: 'disdorqin/disdorqin.github.io',
-giscusRepoId: '你的_repoId',         // ← 替换
-giscusCategory: 'Announcements',
-giscusCategoryId: '你的_categoryId', // ← 替换
-giscusMapping: 'pathname',
-giscusTheme: 'dark',
-```
+1. 在 `src/config/site.ts` 把 `walineServerURL` 设为空字符串 `''`（禁用 Waline）；
+2. 把文章详情页 `src/pages/blog/[slug].astro` 和留言板页 `src/pages/guestbook.astro` 中的 `WalineComment` 替换为 `GiscusComment`；
+3. 确保 `giscusRepoId` / `giscusCategoryId` 已填入真实值（已配置）；
+4. 提交并推送，刷新页面后评论区即使用 Giscus。
 
-保存并推送到 `main`，评论区即生效（文章详情页与 `/guestbook/` 都已接入）。
-
-### 5. 未配置时的说明
-
-在替换真实参数前：
-
-- 文章详情页与留言板页的评论区会显示「**评论系统待配置**」占位提示；
-- 组件**不会**加载 giscus script、也**不会**报错，**不影响**构建、部署与页面其余功能；
-- 这是预期行为。等你按上面 4 步在 `src/config/site.ts` 填好真实的 `giscusRepoId` / `giscusCategoryId` 后，刷新即自动启用，无需改动任何组件代码。
+> Giscus 的所有评论数据存在仓库的 Discussions 里，不占用外部数据库。Waliner 评论则存在 Waline 服务端连接的数据库中。
 
 > 当前 `giscusRepoId` / `giscusCategoryId` 是占位值 `YOUR_REPO_ID` / `YOUR_CATEGORY_ID`，在替换前评论区不会显示，但页面其余功能正常。
 

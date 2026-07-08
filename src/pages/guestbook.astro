@@ -1,21 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import GiscusComment from '../components/GiscusComment.astro';
+import WalineComment from '../components/WalineComment.astro';
 ---
 
-<BaseLayout title="留言板" description="在留言板留下你的想法与反馈">
+<BaseLayout title="留言板" description="留言板——写下你的想法与反馈">
   <div class="container">
     <h1 class="page-title">留言板</h1>
     <p class="page-subtitle">
-      使用 GitHub 账号即可在此留言。首次留言需登录 GitHub 并授权 Giscus。
+      欢迎在留言板留下你的想法、建议或反馈。填写昵称即可评论，无需 GitHub 账号。
     </p>
 
-    <p style="color:var(--text-muted);margin-bottom:2rem">
-      没有 GitHub 账号？也可以直接在文章下方评论区留言，或在
-      <a href="https://github.com/disdorqin/disdorqin.github.io/issues" target="_blank" rel="noopener">GitHub Issues</a>
-      中反馈。
-    </p>
-
-    <GiscusComment />
+    <WalineComment />
   </div>
 </BaseLayout>

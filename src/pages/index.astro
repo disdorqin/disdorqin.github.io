@@ -2,28 +2,39 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import { SITE } from '../config/site';
-import { getPublishedPosts, getCategories } from '../utils/posts';
+import { getPublishedPosts, getPinnedPosts, getCategories } from '../utils/posts';
 import { encodeParam } from '../utils';
 
-const posts = await getPublishedPosts();
-const latest = posts.slice(0, 5);
-const categories = getCategories(posts);
+const allPosts = await getPublishedPosts();
+const pinnedPosts = await getPinnedPosts();
+const latest = allPosts.slice(0, 5);
+const categories = getCategories(allPosts);
 const githubUrl = `https://github.com/${SITE.githubUsername}`;
 const repoUrl = `https://github.com/${SITE.githubUsername}/${SITE.githubUsername}.github.io`;
 ---
 
 <BaseLayout>
-  <div class="container-wide">
+  <div class="container">
     <!-- Hero -->
     <section class="hero">
-      <h1 class="hero__title">{SITE.title}<span class="accent">.</span></h1>
-      <p class="hero__subtitle">{SITE.description}</p>
+      <h1 class="hero__title">{SITE.title}</h1>
+      <p class="hero__subtitle">科研、电力预测、项目日志与日常记录</p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="/blog/">阅读博客</a>
-        <a class="btn" href={repoUrl} target="_blank" rel="noopener">GitHub 仓库</a>
-        <a class="btn" href="/about/">关于我</a>
+        <a class="btn" href={repoUrl} target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="/about/">关于</a>
       </div>
     </section>
+
+    <!-- 置顶文章 -->
+    {pinnedPosts.length > 0 && (
+      <section class="section">
+        <div class="section__head">
+          <h2 class="section__title">置顶</h2>
+        </div>
+        {pinnedPosts.map((post) => <PostCard post={post} />)}
+      </section>
+    )}
 
     <!-- 最新文章 -->
     <section class="section">
@@ -41,28 +52,13 @@ const repoUrl = `https://github.com/${SITE.githubUsername}/${SITE.githubUsername
         <a class="section__more" href="/categories/">全部 →</a>
       </div>
       <div class="chip-cloud">
-        {
-          categories.map((c) => (
-            <a class="badge badge--accent" href={`/categories/${encodeParam(c.name)}/`}>
-              {c.name} <span style="opacity:.6">· {c.count}</span>
-            </a>
-          ))
-        }
+        {categories.map((c) => (
+          <a class="badge badge--accent" href={`/categories/${encodeParam(c.name)}/`}>
+            {c.name} · {c.count}
+          </a>
+        ))}
         <a class="badge" href="/tags/">浏览标签 →</a>
       </div>
-    </section>
-
-    <!-- 项目 / GitHub 入口 -->
-    <section class="section">
-      <div class="section__head">
-        <h2 class="section__title">项目与代码</h2>
-      </div>
-      <p style="color:var(--text-muted)">
-        这里是我的 Vibe Coding 实验场与科研代码集散地。欢迎在
-        <a href={githubUrl} target="_blank" rel="noopener">GitHub</a>
-        上关注我，或直接查看本博客的
-        <a href={repoUrl} target="_blank" rel="noopener">源码仓库</a>。
-      </p>
     </section>
   </div>
 </BaseLayout>

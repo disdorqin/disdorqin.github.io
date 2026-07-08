@@ -36,6 +36,18 @@ export const SITE = {
   giscusCategoryId: 'DIC_kwDOTA6eqs4DAwiT',
   giscusMapping: 'pathname',
   giscusTheme: 'preferred_color_scheme',
+
+  // —— Waline 评论系统（默认启用）——
+  // Waline 需要单独部署服务端，数据存储在 Waline 连接的数据库中。
+  // walineServerURL 为空时页面显示配置提示，不会加载 Waline 脚本。
+  commentProvider: 'waline',
+  walineServerURL: '', // ← 部署 Waline 后填入服务地址，例如 https://xxx.vercel.app
+  walineLang: 'zh-CN',
+  walineDark: 'html.dark',
+  walineLogin: 'disable',
+  walineRequiredMeta: ['nick'],
+  walineMeta: ['nick', 'mail', 'link'],
+  walineCommentSorting: 'latest',
 } as const;
 
 export type SiteConfig = typeof SITE;

@@ -9,7 +9,7 @@ const posts = await getPublishedPosts();
 <BaseLayout title="博客" description="全部文章列表">
   <div class="container">
     <h1 class="page-title">博客</h1>
-    <p class="page-subtitle">共 {posts.length} 篇文章 · 置顶优先 · 按发布时间倒序</p>
+    <p class="page-subtitle">共 {posts.length} 篇文章 · 按发布时间倒序</p>
 
     {posts.map((post) => <PostCard post={post} />)}
 

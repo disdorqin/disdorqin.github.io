@@ -29,7 +29,7 @@ const ogImage = image
 ---
 
 <!doctype html>
-<html lang={SITE.lang} class="dark">
+<html lang={SITE.lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -65,7 +65,7 @@ const ogImage = image
       (function () {
         try {
           var t = localStorage.getItem('theme');
-          if (t !== 'light' && t !== 'dark') t = 'dark'; // 默认暗色
+          if (t !== 'light' && t !== 'dark') t = 'light'; // 默认浅色
           var root = document.documentElement;
           root.classList.toggle('dark', t === 'dark');
           root.style.colorScheme = t;

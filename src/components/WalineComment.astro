@@ -1,0 +1,62 @@
+---
+import { SITE } from '../config/site';
+
+const configured = SITE.walineServerURL && SITE.walineServerURL.length > 0;
+---
+
+{
+  configured ? (
+    <div
+      id="waline"
+      class="waline-wrap"
+      data-server-url={SITE.walineServerURL}
+      data-lang={SITE.walineLang}
+      data-login={SITE.walineLogin}
+      data-meta={JSON.stringify(SITE.walineMeta)}
+      data-required-meta={JSON.stringify(SITE.walineRequiredMeta)}
+      data-comment-sorting={SITE.walineCommentSorting}
+    />
+  ) : (
+    <div class="waline-wrap waline-wrap--placeholder">
+      <p style="color:var(--text-muted);margin:0">
+        评论系统待配置：请部署 Waline 服务并填写 walineServerURL。
+      </p>
+      <p style="color:var(--text-faint);font-size:0.85rem;margin:0.5rem 0 0">
+        详情见 README「Waline 配置步骤」。
+      </p>
+    </div>
+  )
+}
+
+{configured && (
+  <>
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
+    <script type="module">
+      const walineEl = document.getElementById('waline');
+      if (!walineEl) throw new Error('#waline not found');
+
+      const isDark = () => document.documentElement.classList.contains('dark');
+
+      async function loadWaline() {
+        const { init } = await import('https://unpkg.com/@waline/client@v3/dist/waline.mjs');
+
+        const meta = JSON.parse(walineEl.dataset.meta || '[]');
+        const requiredMeta = JSON.parse(walineEl.dataset.requiredMeta || '[]');
+
+        init({
+          el: '#waline',
+          serverURL: walineEl.dataset.serverUrl,
+          lang: walineEl.dataset.lang || 'zh-CN',
+          dark: isDark,
+          login: walineEl.dataset.login || 'disable',
+          meta: meta.length > 0 ? meta : undefined,
+          requiredMeta: requiredMeta.length > 0 ? requiredMeta : undefined,
+          commentSorting: walineEl.dataset.commentSorting || 'latest',
+          path: window.location.pathname,
+        });
+      }
+
+      loadWaline();
+    </script>
+  </>
+)}

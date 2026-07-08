@@ -14,9 +14,11 @@ const url = `/blog/${post.id}/`;
 <article class="post-card">
   {
     cover && (
-      <a href={url} class="post-card__cover-link">
-        <img class="post-card__cover" src={cover} alt={title} loading="lazy" />
-      </a>
+      <div class="post-card__cover-wrap">
+        <a href={url}>
+          <img class="post-card__cover" src={cover} alt={title} loading="lazy" />
+        </a>
+      </div>
     )
   }
   <div class="post-card__body">
@@ -26,21 +28,10 @@ const url = `/blog/${post.id}/`;
     <div class="post-card__meta">
       <time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
       <span>·</span>
-      <a class="badge badge--accent" href={`/categories/${encodeParam(category)}/`}>{category}</a>
+      <a href={`/categories/${encodeParam(category)}/`}>{category}</a>
       <span>·</span>
       <span>{minutes} 分钟阅读</span>
     </div>
     <p class="post-card__desc">{description}</p>
-    {
-      tags.length > 0 && (
-        <div class="post-card__meta" style="margin-top:0.5rem">
-          {tags.map((t) => (
-            <a class="badge" href={`/tags/${encodeParam(t)}/`}>
-              #{t}
-            </a>
-          ))}
-        </div>
-      )
-    }
   </div>
 </article>
