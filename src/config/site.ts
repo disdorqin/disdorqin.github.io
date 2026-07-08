@@ -31,11 +31,11 @@ export const SITE = {
   // —— Giscus 评论系统（占位配置，部署前请替换为真实值）——
   // 生成真实参数见 README：https://giscus.app
   giscusRepo: 'disdorqin/disdorqin.github.io',
-  giscusRepoId: 'YOUR_REPO_ID', // ← 替换为真实 repoId
+  giscusRepoId: 'R_kgDOTA6eqg',
   giscusCategory: 'Announcements',
-  giscusCategoryId: 'YOUR_CATEGORY_ID', // ← 替换为真实 categoryId
+  giscusCategoryId: 'DIC_kwDOTA6eqs4DAwiT',
   giscusMapping: 'pathname',
-  giscusTheme: 'dark',
+  giscusTheme: 'preferred_color_scheme',
 } as const;
 
 export type SiteConfig = typeof SITE;
