@@ -5,10 +5,9 @@ import sitemap from '@astrojs/sitemap';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
-// 仓库名即为 disdorqin.github.io（GitHub Pages 用户/组织页），
-// 因此 site 设为根域名，不配置 base。
+// 使用自定义域名 disdorqin.cn，site 设为其根域名，不配置 base。
 export default defineConfig({
-  site: 'https://disdorqin.github.io',
+  site: 'https://disdorqin.cn',
   trailingSlash: 'ignore',
   integrations: [mdx(), sitemap()],
   markdown: {

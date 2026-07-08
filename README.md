@@ -4,7 +4,7 @@
 
 一个基于 **Astro + TypeScript** 的个人博客，内容用 **Markdown/MDX 内容集合**管理，后台编辑交给 **Pages CMS**，部署在 **GitHub Pages**，评论用 **Giscus**。纯静态、零服务端运行时、不依赖数据库。
 
-- 站点：`https://disdorqin.github.io`
+- 站点：`https://disdorqin.cn`
 - 仓库：`disdorqin/disdorqin.github.io`
 
 ---
@@ -17,6 +17,7 @@
 - [本地运行命令](#本地运行命令)
 - [上线前检查](#上线前检查)
 - [部署步骤](#部署步骤)
+- [自定义域名](#自定义域名)
 - [Pages CMS 使用步骤](#pages-cms-使用步骤)
 - [Pages CMS 发文检查](#pages-cms-发文检查)
 - [Giscus 配置步骤](#giscus-配置步骤)
@@ -158,7 +159,7 @@ npm run check       # = preflight + astro check + build
 
 - 关键文件存在：`package.json` / `astro.config.mjs` / `.pages.yml` / `src/content.config.ts` / `.github/workflows/deploy.yml`
 - `src/content/blog/` 至少 1 篇文章、`public/uploads/` 存在
-- `astro.config.mjs` 中 `site` 为 `https://disdorqin.github.io`，且不配置 `base`
+- `astro.config.mjs` 中 `site` 为 `https://disdorqin.cn`，且不配置 `base`
 - 暂存区**不包含** `dist/` 与 `node_modules/`
 - 每篇文章 frontmatter：`title` / `description` / `pubDate` / `category` 必填，`tags` 为数组，`draft` / `pinned` 为 boolean 或可省略，`cover` 若存在须以 `/uploads/` 开头或合法外链
 - 无重复 slug
@@ -173,9 +174,45 @@ npm run check       # = preflight + astro check + build
 4. 推送后，Actions 会自动执行 `.github/workflows/deploy.yml`：
    - `build` 任务：`npm ci` → `npm run preflight`（上线前检查）→ `npm run build` → 上传 `dist/`
    - `deploy` 任务：发布到 GitHub Pages
-5. 几分钟后访问 `https://disdorqin.github.io`。
+5. 几分钟后访问 `https://disdorqin.cn`（或 `https://disdorqin.github.io`，后者会自动跳转）。
 
-> 仓库名就是 `disdorqin.github.io`，因此 `astro.config.mjs` 中 `site` 设为根域名 `https://disdorqin.github.io`，**不需要也不应该设置 `base`**。
+> 已配置自定义域名 `disdorqin.cn`，因此 `astro.config.mjs` 中 `site` 设为 `https://disdorqin.cn`，**不需要也不应该设置 `base`**。
+
+---
+
+## 自定义域名
+
+本博客已启用自定义域名：
+
+- **主域名（推荐）**：`https://disdorqin.cn`
+- **备用**：`https://disdorqin.github.io`（会自动跳转到 `disdorqin.cn`）
+
+### DNS 配置步骤
+
+在域名 DNS 管理面板中添加以下记录：
+
+| 类型  | 名称  | 目标 |
+|-------|-------|------|
+| A     | `@`   | `185.199.108.153` |
+| A     | `@`   | `185.199.109.153` |
+| A     | `@`   | `185.199.110.153` |
+| A     | `@`   | `185.199.111.153` |
+| CNAME | `www` | `disdorqin.github.io` |
+
+> `@` 是根域名记录（disdorqin.cn 本身）。以上四个 A 记录是 GitHub Pages 的固定 IP，CNAME 记录用于 `www.disdorqin.cn` 跳转到 `disdorqin.cn`。
+
+### GitHub Pages 配置
+
+1. 进入仓库 **Settings → Pages → Custom domain**，填写 `disdorqin.cn`，点击 **Save**。
+2. 等待 DNS 检查通过（可能需要几分钟到数小时，取决于 DNS 传播速度）。
+3. DNS Check 通过后，勾选 **Enforce HTTPS**（启用后需等待 GitHub 签发证书，通常几分钟内完成）。
+
+### 注意事项
+
+- **不要使用 wildcard DNS（如 `*.disdorqin.cn`）**，GitHub Pages 不支持泛解析。
+- 如果 `www.disdorqin.cn` 不能自动跳转，请检查 `www` 的 CNAME 记录是否正确指向 `disdorqin.github.io`。
+- DNS 变更全球传播通常需要 10 分钟到 24 小时不等。
+- 源码仓库仍然是 `disdorqin/disdorqin.github.io`，GitHub Actions 工作流无需变更。
 
 ---
 

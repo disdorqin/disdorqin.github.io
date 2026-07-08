@@ -14,8 +14,8 @@ import { dirname, join, resolve } from 'node:path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, '..');
 
-// 预期站点地址（仓库名 disdorqin.github.io 决定，无 base）
-const EXPECTED_SITE = 'https://disdorqin.github.io';
+// 预期站点地址（自定义域名 disdorqin.cn，无 base）
+const EXPECTED_SITE = 'https://disdorqin.cn';
 const GISCUS_PLACEHOLDER_REPO_ID = 'YOUR_REPO_ID';
 const GISCUS_PLACEHOLDER_CATEGORY_ID = 'YOUR_CATEGORY_ID';
 
@@ -76,7 +76,7 @@ if (existsSync(cfgPath)) {
   if (siteMatch && siteMatch[1] === EXPECTED_SITE) ok(`site = ${siteMatch[1]}`);
   else fail(`astro.config.mjs 中 site 必须为 ${EXPECTED_SITE}`);
 
-  // base 不应配置（仓库名即用户页 disdorqin.github.io）
+  // base 不应配置（用户页 / 自定义域名场景无需 base）
   if (/\bbase\s*:\s*['"`]/.test(cfg)) fail('astro.config.mjs 不应配置 base（用户页仓库无需 base）');
   else ok('未配置 base（符合用户页仓库规范）');
 }

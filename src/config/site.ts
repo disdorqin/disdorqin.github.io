@@ -7,7 +7,7 @@ export const SITE = {
   description: '科研、电力预测、项目日志与 Vibe Coding 实验场',
   author: 'Disdorqin',
   githubUsername: 'disdorqin',
-  url: 'https://disdorqin.github.io',
+  url: 'https://disdorqin.cn',
   lang: 'zh-CN',
 
   // GitHub 仓库（用于导航、GitHub 入口、RSS 等）

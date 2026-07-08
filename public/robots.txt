@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://disdorqin.github.io/sitemap-index.xml
+Sitemap: https://disdorqin.cn/sitemap-index.xml
