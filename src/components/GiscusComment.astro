@@ -2,60 +2,77 @@
 import { SITE } from '../config/site';
 // 占位配置：真实 repoId / categoryId 请在 src/config/site.ts 中替换。
 // 生成方式见 README「Giscus 配置步骤」。
+// 未配置（仍为占位值）时，不加载 giscus script，只显示提示，不影响构建与部署。
+const configured =
+  SITE.giscusRepoId !== 'YOUR_REPO_ID' && SITE.giscusCategoryId !== 'YOUR_CATEGORY_ID';
 ---
 
-<div
-  class="giscus"
-  id="giscus"
-  data-repo={SITE.giscusRepo}
-  data-repo-id={SITE.giscusRepoId}
-  data-category={SITE.giscusCategory}
-  data-category-id={SITE.giscusCategoryId}
-  data-mapping={SITE.giscusMapping}
-  data-theme={SITE.giscusTheme}
->
-</div>
+{
+  configured ? (
+    <div
+      class="giscus"
+      id="giscus"
+      data-repo={SITE.giscusRepo}
+      data-repo-id={SITE.giscusRepoId}
+      data-category={SITE.giscusCategory}
+      data-category-id={SITE.giscusCategoryId}
+      data-mapping={SITE.giscusMapping}
+      data-theme={SITE.giscusTheme}
+    />
+  ) : (
+    <div class="giscus giscus--placeholder">
+      <p class="giscus__hint">评论系统待配置</p>
+      <p class="giscus__sub">
+        站长尚未接入 Giscus。开启仓库 Discussions、安装 Giscus App 并在
+        <code>src/config/site.ts</code> 填入真实 <code>giscusRepoId</code> /
+        <code>giscusCategoryId</code> 后，评论区即可启用。
+      </p>
+    </div>
+  )
+}
 
-<script is:inline>
-  (function () {
-    var el = document.getElementById('giscus');
-    if (!el) return;
+{configured && (
+  <script is:inline>
+    (function () {
+      var el = document.getElementById('giscus');
+      if (!el) return;
 
-    function currentTheme() {
-      // 跟随站点亮/暗主题
-      return document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-    }
-
-    function load() {
-      var s = document.createElement('script');
-      s.src = 'https://giscus.app/client.js';
-      s.async = true;
-      s.crossOrigin = 'anonymous';
-      s.setAttribute('data-repo', el.dataset.repo);
-      s.setAttribute('data-repo-id', el.dataset.repoId);
-      s.setAttribute('data-category', el.dataset.category);
-      s.setAttribute('data-category-id', el.dataset.categoryId);
-      s.setAttribute('data-mapping', el.dataset.mapping);
-      s.setAttribute('data-strict', '0');
-      s.setAttribute('data-reactions-enabled', '1');
-      s.setAttribute('data-emit-metadata', '0');
-      s.setAttribute('data-input-position', 'bottom');
-      s.setAttribute('data-theme', currentTheme());
-      s.setAttribute('data-lang', 'zh-CN');
-      el.appendChild(s);
-    }
-
-    load();
-
-    // 主题切换时同步 Giscus
-    window.addEventListener('theme-changed', function () {
-      var frame = document.querySelector('iframe.giscus-frame');
-      if (frame) {
-        frame.contentWindow.postMessage(
-          { giscus: { setConfig: { theme: currentTheme() } } },
-          'https://giscus.app'
-        );
+      function currentTheme() {
+        // 跟随站点亮/暗主题
+        return document.documentElement.classList.contains('dark') ? 'dark' : 'light';
       }
-    });
-  })();
-</script>
+
+      function load() {
+        var s = document.createElement('script');
+        s.src = 'https://giscus.app/client.js';
+        s.async = true;
+        s.crossOrigin = 'anonymous';
+        s.setAttribute('data-repo', el.dataset.repo);
+        s.setAttribute('data-repo-id', el.dataset.repoId);
+        s.setAttribute('data-category', el.dataset.category);
+        s.setAttribute('data-category-id', el.dataset.categoryId);
+        s.setAttribute('data-mapping', el.dataset.mapping);
+        s.setAttribute('data-strict', '0');
+        s.setAttribute('data-reactions-enabled', '1');
+        s.setAttribute('data-emit-metadata', '0');
+        s.setAttribute('data-input-position', 'bottom');
+        s.setAttribute('data-theme', currentTheme());
+        s.setAttribute('data-lang', 'zh-CN');
+        el.appendChild(s);
+      }
+
+      load();
+
+      // 主题切换时同步 Giscus
+      window.addEventListener('theme-changed', function () {
+        var frame = document.querySelector('iframe.giscus-frame');
+        if (frame) {
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme: currentTheme() } } },
+            'https://giscus.app'
+          );
+        }
+      });
+    })();
+  </script>
+)}
