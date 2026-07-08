@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../config/site';
+
+const pagesCmsUrl = 'https://app.pagescms.org';
+const repoUrl = `https://github.com/${SITE.githubUsername}/${SITE.githubUsername}.github.io`;
+---
+
+<BaseLayout
+  title="写作后台"
+  description="本站文章由 Pages CMS 管理，站长通过 GitHub 登录后新建、编辑并发布文章"
+>
+  <div class="container">
+    <h1 class="page-title">写作后台</h1>
+    <p class="page-subtitle">本站内容由 Pages CMS 管理，不是在前台页面直接写。</p>
+
+    <div class="admin-card">
+      <h2 class="admin-card__title">这是什么</h2>
+      <p>
+        这个博客的所有文章都通过
+        <a href={pagesCmsUrl} target="_blank" rel="noopener noreferrer">Pages CMS</a>
+        在浏览器里编辑。它读取仓库根目录的 <code>.pages.yml</code>，把文章保存为
+        <code>src/content/blog/</code> 下的 Markdown 文件并提交到 GitHub，随后自动触发
+        GitHub Actions 构建部署。
+      </p>
+
+      <h2 class="admin-card__title">谁能写</h2>
+      <ul>
+        <li><strong>站长（拥有仓库写权限）</strong>：用 GitHub 登录 Pages CMS 后即可新建、编辑、发布文章。</li>
+        <li><strong>普通访客</strong>：没有 GitHub 仓库写权限，因此无法在后台写文章，只能阅读。</li>
+        <li>是否可编辑完全由 <strong>GitHub 的仓库权限</strong> 决定，本站不自建登录系统、不保存任何 token。</li>
+      </ul>
+
+      <h2 class="admin-card__title">保存后会发生什么</h2>
+      <ol>
+        <li>在 Pages CMS 中填写标题、摘要、分类、标签、封面与正文，点击保存。</li>
+        <li>Pages CMS 把文章提交到本仓库的 <code>main</code> 分支。</li>
+        <li>GitHub Actions 自动执行 <code>npm run preflight</code> → <code>npm run build</code> → 部署到 GitHub Pages。</li>
+        <li>通常 1–2 分钟后即可在 <a href={`${SITE.url}`} rel="noopener">{SITE.url}</a> 看到新文章。</li>
+      </ol>
+
+      <div class="admin-actions">
+        <a
+          class="btn btn--primary"
+          href={pagesCmsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          进入写作后台 →
+        </a>
+        <a class="btn" href={repoUrl} target="_blank" rel="noopener noreferrer">
+          查看仓库
+        </a>
+      </div>
+
+      <p class="admin-note">
+        提示：如果你不是本站站长，点击上方按钮后 Pages CMS 会要求 GitHub 授权，
+        但无仓库写权限时只能浏览，无法发布文章。
+      </p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .admin-card {
+    margin-top: 1.5rem;
+    padding: 1.75rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--surface);
+  }
+  .admin-card__title {
+    margin-top: 1.5rem;
+    margin-bottom: 0.6rem;
+    font-size: 1.05rem;
+    color: var(--accent);
+  }
+  .admin-card__title:first-child {
+    margin-top: 0;
+  }
+  .admin-card p,
+  .admin-card li {
+    color: var(--text);
+    line-height: 1.75;
+  }
+  .admin-actions {
+    margin-top: 1.75rem;
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  .admin-note {
+    margin-top: 1.25rem;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    border-top: 1px dashed var(--border);
+    padding-top: 1rem;
+  }
+</style>

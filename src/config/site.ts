@@ -22,6 +22,7 @@ export const SITE = {
     { label: '关于', href: '/about/' },
     { label: '留言', href: '/guestbook/' },
     { label: '搜索', href: '/search/' },
+    { label: '后台', href: '/admin/' },
   ],
 
   // —— 分类定义（与 .pages.yml 的 select options 保持一致）——

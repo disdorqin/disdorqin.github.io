@@ -21,6 +21,7 @@
 - [Pages CMS 发文检查](#pages-cms-发文检查)
 - [Giscus 配置步骤](#giscus-配置步骤)
 - [如何写 / 发布第一篇文章](#如何写--发布第一篇文章)
+- [写作后台](#写作后台)
 - [常见问题排查](#常见问题排查)
 
 ---
@@ -325,6 +326,30 @@ pinned: false
 ```
 
 > 字段与 `src/content.config.ts` 的 schema 完全一致；缺字段或类型不符会在构建时报错。
+
+---
+
+## 写作后台
+
+本站提供了一个伪动态写作后台入口：**`/admin/`**（导航栏「后台」与页脚「写作后台」均指向它）。
+
+需要澄清的关键点：
+
+- **写文章不是在前台页面直接写。** 前台 `/admin/` 只是一个说明 + 跳转页，没有任何输入框、没有自建登录系统、不保存任何 token。
+- **真正的后台是 Pages CMS。** 点击 `/admin/` 里的「进入写作后台」按钮会跳转到 [https://app.pagescms.org](https://app.pagescms.org)，站长用 GitHub 登录后即可在浏览器里新建、编辑、发布文章。
+- **权限由 GitHub 决定。** Pages CMS 使用 GitHub OAuth 登录，能否编辑文章完全取决于登录账号是否拥有本仓库（`disdorqin/disdorqin.github.io`）的**写权限**：
+  - 站长（有写权限）：可新建 / 编辑 / 发布。
+  - 普通访客（无写权限）：能看到后台页面，但无法发布文章。
+- **保存即发布。** 在 Pages CMS 保存文章后，内容会作为 Markdown 提交到仓库 `main` 分支，自动触发 GitHub Actions（`npm run preflight` → `npm run build` → 部署到 GitHub Pages），通常 1–2 分钟后新文章即上线。
+
+`/admin/` 页面包含的内容：
+
+1. 说明「本站文章由 Pages CMS 管理，不是前台直接写」；
+2. 说明「谁有权限写 / 访客为何不能写」；
+3. 说明「保存后如何自动触发 GitHub Actions 部署」；
+4. 一个醒目的「进入写作后台 →」按钮，链接到 `https://app.pagescms.org`（新标签页打开，`rel="noopener noreferrer"`）。
+
+> 安全边界：本站不引入数据库、不引入后端服务、不暴露任何 token。所有写权限判定与登录都发生在 GitHub / Pages CMS 一侧。
 
 ---
 
