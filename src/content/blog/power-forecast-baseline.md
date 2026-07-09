@@ -2,7 +2,6 @@
 title: 电力负荷预测基线模型构建
 description: 从数据清洗到季节性朴素法与 LightGBM 基线的完整流程，给出一个可复现的负荷预测起点。
 pubDate: 2026-03-05
-updatedDate: 2026-06-25
 category: 电力预测
 tags:
   - 负荷预测
