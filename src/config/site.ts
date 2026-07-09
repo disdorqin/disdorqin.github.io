@@ -49,6 +49,12 @@ export const SITE = {
   walineRequiredMeta: ['nick'],
   walineMeta: ['nick', 'mail', 'link'],
   walineCommentSorting: 'latest',
+
+  // —— 评论图片上传（MVP：前端压缩后转 Base64 写入评论，不建后端）——
+  walineImageUpload: true,
+  walineImageMaxSizeMB: 5,
+  walineImageMaxWidth: 1600,
+  walineImageQuality: 0.82,
 } as const;
 
 export type SiteConfig = typeof SITE;

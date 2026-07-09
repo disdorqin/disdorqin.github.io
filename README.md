@@ -23,6 +23,7 @@
 - [文章排序说明](#文章排序说明)
 - [Waline 配置步骤（默认评论系统）](#waline-配置步骤默认评论系统)
 - [Giscus（可选方案）](#giscus可选方案)
+- [图片上传说明](#图片上传说明)
 - [如何写 / 发布第一篇文章](#如何写--发布第一篇文章)
 - [写作后台](#写作后台)
 - [常见问题排查](#常见问题排查)
@@ -365,6 +366,43 @@ Giscus 使用 GitHub Discussions 存储评论，**免费、无需额外数据库
 > Giscus 的所有评论数据存在仓库的 Discussions 里，不占用外部数据库。Waliner 评论则存在 Waline 服务端连接的数据库中。
 
 > 当前 `giscusRepoId` / `giscusCategoryId` 是占位值 `YOUR_REPO_ID` / `YOUR_CATEGORY_ID`，在替换前评论区不会显示，但页面其余功能正常。
+
+---
+
+## 图片上传说明
+
+本站支持两类图片：**文章配图**（Pages CMS 后台上传）与 **评论配图**（Waline 评论区上传）。
+
+### 1. 写文章加图片
+
+- 进入 `https://disdorqin.cn/admin/` → 点击「进入写作后台」→ 用 Pages CMS 编辑文章；
+- **封面图**：在文章的 `cover` 字段（图片类型 `image`）直接上传；
+- **正文插图**：在富文本编辑器（`rich-text`）里插入图片，编辑器会调用媒体库；
+- 图片统一保存到 `public/uploads/`，写入内容的路径形如 `/uploads/xxx.png`（**不是**本地绝对路径，也**不是**仓库相对路径）；
+- 支持的格式：`png / jpg / jpeg / webp / gif`，文件名自动 slug 化（避免中文 / 空格导致路径问题）；
+- 构建时 `cover` 必须是 `/uploads/...` 开头的路径，否则 `npm run preflight` 检查会报错。
+
+> 上传后的图片路径由 Pages CMS 自动写成 `/uploads/xxx`，无需手改。
+
+### 2. 评论加图片
+
+- 文章详情页与 `/guestbook/` 留言板的 Waline 评论区支持上传图片；
+- 支持格式：`png / jpeg / webp / gif`；
+- **GIF**：不压缩，限制 **2MB**；
+- **普通图片（png/jpeg/webp）**：原图限制 **5MB**，上传前在浏览器本地自动压缩——
+  - 最大宽度 **1600px**；
+  - 优先输出 `image/webp`，浏览器不支持则退化为 `image/jpeg`；
+  - 质量约 **0.82**，并尽量把最终 Data URL 控制在 **1.5MB** 以内；
+- 这是 **MVP 方案**：图片以 **Base64 Data URL** 直接写入评论内容，存入 Waline / Neon 数据库；**不会**上传到本 GitHub 仓库，**没有**自建后端上传接口，也**没有**引入 Cloudinary / 阿里云 OSS / R2 等第三方图床；
+- 如果以后评论图片很多、数据库压力大，建议把 `imageUploader` 改成「上传到对象存储后返回 URL」的方案（Cloudinary / R2 / 阿里云 OSS 等）。
+
+### 3. 注意事项
+
+- 不要在评论里上传隐私图片（如证件、含他人信息的聊天截图）；
+- 不要上传超大原图（普通 **5MB** / GIF **2MB** 上限，超出会被拦截并提示「图片太大了，请压缩到 XMB 以内再上传。」）；
+- 不要上传违法 / 侵权图片；
+- 评论图片随评论内容存储在 Waline 服务端数据库，不占用本仓库容量；
+- 相关开关在 `src/config/site.ts`：`walineImageUpload` / `walineImageMaxSizeMB` / `walineImageMaxWidth` / `walineImageQuality`。
 
 ---
 

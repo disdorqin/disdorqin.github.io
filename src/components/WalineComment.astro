@@ -16,6 +16,10 @@ const configured = SITE.walineServerURL && SITE.walineServerURL.length > 0;
       data-required-meta={JSON.stringify(SITE.walineRequiredMeta)}
       data-comment-sorting={SITE.walineCommentSorting}
       data-dark={SITE.walineDark}
+      data-image-upload={String(SITE.walineImageUpload)}
+      data-image-max-size={String(SITE.walineImageMaxSizeMB)}
+      data-image-max-width={String(SITE.walineImageMaxWidth)}
+      data-image-quality={String(SITE.walineImageQuality)}
     />
   ) : (
     <div class="waline-wrap waline-wrap--placeholder">
@@ -36,6 +40,92 @@ const configured = SITE.walineServerURL && SITE.walineServerURL.length > 0;
       const walineEl = document.getElementById('waline');
       if (!walineEl) throw new Error('#waline not found');
 
+      const ALLOWED_TYPES = ['image/png', 'image/jpeg', 'image/webp', 'image/gif'];
+      const MB = 1024 * 1024;
+
+      // File -> Data URL
+      function fileToDataURL(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = () => reject(new Error('读取文件失败。'));
+          reader.readAsDataURL(file);
+        });
+      }
+
+      // 加载图片以读取尺寸
+      function loadImage(src) {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = () => resolve(img);
+          img.onerror = () => reject(new Error('图片解析失败。'));
+          img.src = src;
+        });
+      }
+
+      // 校验格式 + 体积上限
+      function validateCommentImage(file, maxSizeBytes) {
+        if (!ALLOWED_TYPES.includes(file.type)) {
+          throw new Error('只支持 png / jpeg / webp / gif 格式的图片。');
+        }
+        if (file.size > maxSizeBytes) {
+          throw new Error('图片太大了，请压缩到 ' + (maxSizeBytes / MB) + 'MB 以内再上传。');
+        }
+      }
+
+      // 非 gif 图片：缩放 + canvas 压缩为 webp（不支持则 jpeg）
+      async function compressImageToDataURL(file, maxWidth, quality) {
+        const dataUrl = await fileToDataURL(file);
+        const img = await loadImage(dataUrl);
+        let { width, height } = img;
+        if (width > maxWidth) {
+          height = Math.round(height * (maxWidth / width));
+          width = maxWidth;
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) throw new Error('当前浏览器不支持图片压缩。');
+        ctx.drawImage(img, 0, 0, width, height);
+
+        const supportsWebp = canvas.toDataURL('image/webp').startsWith('data:image/webp');
+        const outMime = supportsWebp ? 'image/webp' : 'image/jpeg';
+
+        // 尽量控制在 1.5MB 以内的 Data URL
+        const TARGET = 1.5 * MB;
+        let q = quality;
+        let out = canvas.toDataURL(outMime, q);
+        while (out.length > TARGET && q > 0.4) {
+          q -= 0.1;
+          out = canvas.toDataURL(outMime, q);
+        }
+        return out;
+      }
+
+      // Waline imageUploader：返回压缩后的 Data URL
+      async function imageUploader(file) {
+        if (walineEl.dataset.imageUpload !== 'true') {
+          throw new Error('评论图片功能已关闭。');
+        }
+        const maxSizeMB = Number(walineEl.dataset.imageMaxSize || '5');
+        const maxSizeBytes = maxSizeMB * MB;
+        const maxWidth = Number(walineEl.dataset.imageMaxWidth || '1600');
+        const quality = Number(walineEl.dataset.imageQuality || '0.82');
+
+        validateCommentImage(file, maxSizeBytes);
+
+        // GIF 不压缩，仅限制 2MB
+        if (file.type === 'image/gif') {
+          if (file.size > 2 * MB) {
+            throw new Error('GIF 图片太大了，请压缩到 2MB 以内再上传。');
+          }
+          return fileToDataURL(file);
+        }
+
+        return compressImageToDataURL(file, maxWidth, quality);
+      }
+
       async function loadWaline() {
         const { init } = await import('https://unpkg.com/@waline/client@v3/dist/waline.mjs');
 
@@ -46,12 +136,13 @@ const configured = SITE.walineServerURL && SITE.walineServerURL.length > 0;
           el: '#waline',
           serverURL: walineEl.dataset.serverUrl,
           lang: walineEl.dataset.lang || 'zh-CN',
-          dark: walineEl.dataset.dark,
+          dark: walineEl.dataset.dark || 'html.dark',
           login: walineEl.dataset.login || 'disable',
           meta: meta.length > 0 ? meta : undefined,
           requiredMeta: requiredMeta.length > 0 ? requiredMeta : undefined,
           commentSorting: walineEl.dataset.commentSorting || 'latest',
           path: window.location.pathname,
+          imageUploader,
         });
       }
 

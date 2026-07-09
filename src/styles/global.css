@@ -437,6 +437,14 @@ a.badge:hover {
 }
 .prose a { text-decoration: underline; text-underline-offset: 2px; }
 
+/* —— Waline 评论区图片（防止炸版）—— */
+.wl-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 0.5rem 0;
+}
+
 /* Shiki 双主题切换 */
 html.dark .astro-code,
 html.dark .astro-code span {
