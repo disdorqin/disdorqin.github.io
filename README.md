@@ -466,3 +466,5 @@ A：站点信息在 `src/config/site.ts`；主题颜色变量在 `src/styles/glo
 ## License
 
 内容版权归作者所有；代码以仓库 LICENSE 为准。
+
+> Last updated: 2026-07-09
