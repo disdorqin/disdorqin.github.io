@@ -17,6 +17,7 @@ export const SITE = {
   nav: [
     { label: '首页', href: '/' },
     { label: '博客', href: '/blog/' },
+    { label: '归档', href: '/moments/' },
     { label: '分类', href: '/categories/' },
     { label: '标签', href: '/tags/' },
     { label: '关于', href: '/about/' },
@@ -26,7 +27,7 @@ export const SITE = {
   ],
 
   // —— 分类定义（与 .pages.yml 的 select options 保持一致）——
-  categories: ['科研笔记', '电力预测', '机器学习', '项目日志', 'Vibe Coding', '杂谈'] as const,
+  categories: ['科研笔记', '电力预测', '机器学习', '项目日志', 'Vibe Coding', '杂谈', '朋友圈归档', '生活切片'] as const,
 
   // —— Giscus 评论系统（占位配置，部署前请替换为真实值）——
   // 生成真实参数见 README：https://giscus.app

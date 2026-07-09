@@ -11,7 +11,12 @@
     "preview": "astro preview",
     "astro": "astro",
     "preflight": "node scripts/preflight.mjs",
-    "check": "npm run preflight && astro check && npm run build"
+    "check": "npm run preflight && astro check && npm run build",
+    "capture:wechat-moments": "node scripts/capture-wechat-moments.mjs",
+    "ocr:wechat-moments": "python scripts/ocr-wechat-moments.py",
+    "review:wechat-moments": "node scripts/build-wechat-moments-review.mjs",
+    "promote:wechat-moments": "node scripts/promote-wechat-moments-reviewed.mjs",
+    "import:wechat-moments": "node scripts/import-wechat-moments.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.4",

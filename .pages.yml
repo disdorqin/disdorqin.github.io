@@ -45,7 +45,7 @@ content:
         type: select
         required: true
         options:
-          values: [科研笔记, 电力预测, 机器学习, 项目日志, Vibe Coding, 杂谈]
+          values: [科研笔记, 电力预测, 机器学习, 项目日志, Vibe Coding, 杂谈, 朋友圈归档, 生活切片]
       - name: tags
         label: 标签
         type: string

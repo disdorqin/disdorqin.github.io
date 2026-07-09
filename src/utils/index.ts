@@ -1,8 +1,8 @@
-/** 格式化日期为中文：2026年07月08日 */
+/** 格式化日期为中文：2026年07月08日（使用 Asia/Shanghai 时区） */
 export function formatDate(date: Date): string {
-  const y = date.getFullYear();
-  const m = String(date.getMonth() + 1).padStart(2, '0');
-  const d = String(date.getDate()).padStart(2, '0');
+  const [y, m, d] = date
+    .toLocaleDateString('en-CA', { timeZone: 'Asia/Shanghai' })
+    .split('-');
   return `${y}年${m}月${d}日`;
 }
 

@@ -463,6 +463,164 @@ A：站点信息在 `src/config/site.ts`；主题颜色变量在 `src/styles/glo
 
 ---
 
+## 微信朋友圈归档
+
+将个人微信朋友圈内容迁移为本博客文章。
+
+### 免责声明
+
+1. **这只是本地辅助迁移工具，不是微信官方导出功能。**
+2. 日期由 OCR 猜测生成，**必须人工复核**。
+3. 不建议迁移他人的评论、点赞、头像、昵称。
+4. 如果朋友圈中包含他人隐私，发布前应打码或删除。
+5. 图片原图 MVP 暂不保证自动导出；可手动保存到 `data/wechat-moments/media/` 并在 CSV `images` 字段填写文件名。
+6. 如果使用 iPhone，推荐走「手动截图 + OCR」流程，不推荐 adb 自动采集。
+
+### 目录结构
+
+```
+data/wechat-moments/
+├── raw/                          # 采集会话原始数据
+│   └── session-YYYYMMDD-HHmmss/
+│       ├── screenshots/          # 截图 PNG
+│       ├── ocr/                  # OCR JSON 结果
+│       └── capture-log.json      # 采集元数据
+├── moments.review.csv            # 待校对 CSV（人工编辑此文件）
+├── moments.csv                   # 已校对 CSV（供 import 使用）
+└── media/                        # 朋友圈图片（手动放入）
+```
+
+### 完整工作流
+
+#### 前提条件
+
+- **adb 自动采集**（推荐安卓）：安装 [Android Platform Tools](https://developer.android.com/studio/releases/platform-tools)，确保 `adb devices` 可识别设备。
+- **手动截图**（iPhone / 无 adb）：手机截屏后传到电脑，放入 `raw/session-xxx/screenshots/` 目录。
+
+#### 步骤 1：截图采集
+
+```bash
+# 安卓设备自动采集
+npm run capture:wechat-moments -- --max-screens 30
+```
+
+参数：
+- `--max-screens=N`：最大截图数（默认 50）
+- `--delay=N`：滚动间隔毫秒（默认 1500）
+- `--dry-run`：只预览不保存
+
+脚本会自动滚动、截图、去重，在检测到连续 3 张重复截图时自动停止。
+
+#### 步骤 2：中文 OCR
+
+```bash
+# 需先安装 PaddleOCR
+pip install paddlepaddle paddleocr
+
+# 运行 OCR
+npm run ocr:wechat-moments
+```
+
+如果 PaddleOCR 安装困难，可改用 EasyOCR：
+
+```bash
+pip install easyocr
+# 然后编辑 scripts/ocr-wechat-moments.py，将 USE_ENGINE = "easyocr"
+```
+
+参数：
+- `--session session-xxx`：指定会话目录（不填自动使用最新）
+- `--skip-ocr`：跳过 OCR 仅查看状态
+- `--engine easyocr`：使用 EasyOCR 引擎
+
+#### 步骤 3：生成校对 CSV
+
+```bash
+npm run review:wechat-moments
+```
+
+生成 `data/wechat-moments/moments.review.csv`，每张截图一行。
+
+#### 步骤 4：人工校对
+
+用 Excel / VS Code / 文本编辑器打开 `data/wechat-moments/moments.review.csv`：
+
+1. 拆分/合并截图文本为**单条朋友圈**
+2. 确认 `date`（格式 `YYYY-MM-DD`）和 `time`（格式 `HH:mm`）
+3. 确认 `content`（正文，必须填写）
+4. 可选填写 `title`、`location`、`visibility`
+5. 若有图片，放入 `data/wechat-moments/media/`，在 `images` 列填写文件名
+6. 校对无误后，把 `ready` 列改为 `true`
+
+#### 步骤 5：Promote 到导入 CSV
+
+```bash
+npm run promote:wechat-moments
+```
+
+只将 `ready=true` 且 `date`、`content` 完整的行写入 `data/wechat-moments/moments.csv`。缺失 `date` 或 `content` 的行会报错。
+
+参数：
+- `--dry-run`：只检查不写入
+- `--force`：覆盖现有 `moments.csv`
+
+#### 步骤 6：导入博客
+
+```bash
+npm run import:wechat-moments
+```
+
+生成博客文章到 `src/content/blog/`。默认 `draft: true`，所有文章需要检查后再发布。
+
+参数：
+- `--dry-run`：预览不写入
+- `--force`：覆盖已存在的文章
+
+#### 步骤 7：构建并发布
+
+```bash
+npm run preflight   # 上线前检查
+npm run build       # 构建（含 Pagefind 索引）
+# 确认无误后
+git add .
+git commit -m "feat: add WeChat moments"
+git push origin main
+```
+
+### 导入规则
+
+- `pubDate` = 朋友圈原发布时间（保留 +08:00 时区）
+- 有时：`pubDate: 2024-12-25T20:30:00+08:00`
+- 无时：`pubDate: 2024-12-25`
+- `category` 自动设为 `朋友圈归档`
+- `tags` 至少包含 `朋友圈`
+- 图片自动复制到 `public/uploads/wechat-moments/YYYY/MM/`
+- 文件名格式 `moment-YYYY-MM-DD[-HH-mm]-slug.md`
+- 缺失图片只警告，不中断
+- 同名文件默认跳过（`--force` 覆盖）
+
+### CSV 字段说明
+
+`moments.review.csv` 字段：
+
+| 字段 | 必填 | 说明 |
+|------|------|------|
+| `ready` | 是 | `false` 或 `true`，改为 `true` 才允许 promote |
+| `id` | 否 | 唯一编号，自动生成 |
+| `date` | 是 | 朋友圈日期 `YYYY-MM-DD` |
+| `time` | 否 | `HH:mm`，如有则合并为完整时间 |
+| `title` | 否 | 不填自动生成 `YYYY-MM-DD 的朋友圈` |
+| `content` | 是 | 朋友圈文字 |
+| `images` | 否 | 用分号分隔，如 `2020-01-01-1.jpg;2020-01-01-2.jpg` |
+| `location` | 否 | 位置文本 |
+| `visibility` | 否 | 例如 `公开` / `私密` / `仅自己可见` |
+| `tags` | 否 | 用分号分隔，默认 `朋友圈;生活切片` |
+| `draft` | 否 | `true` 或 `false`，默认 `true` |
+| `sourceScreenshot` | 否 | 来源截图，仅 review CSV 存在 |
+| `notes` | 否 | OCR 提示/置信度，仅 review CSV 存在 |
+
+---
+
 ## License
 
 内容版权归作者所有；代码以仓库 LICENSE 为准。
