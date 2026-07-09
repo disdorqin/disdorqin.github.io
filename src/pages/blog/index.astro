@@ -3,21 +3,38 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PostCard from '../../components/PostCard.astro';
 import { getPublishedPosts } from '../../utils/posts';
 
-const posts = await getPublishedPosts();
+const PAGE_SIZE = 6;
+const allPosts = await getPublishedPosts();
+const totalPages = Math.ceil(allPosts.length / PAGE_SIZE);
+const posts = allPosts.slice(0, PAGE_SIZE);
+const hasNext = allPosts.length > PAGE_SIZE;
 ---
 
 <BaseLayout title="博客" description="全部文章列表">
   <div class="container">
     <h1 class="page-title">博客</h1>
-    <p class="page-subtitle">共 {posts.length} 篇文章 · 按发布时间倒序</p>
+    <p class="page-subtitle">共 {allPosts.length} 篇文章</p>
 
     {posts.map((post) => <PostCard post={post} />)}
 
     {
-      posts.length === 0 && (
+      allPosts.length === 0 && (
         <p style="color:var(--text-muted);margin-top:2rem">
           还没有已发布的文章。可通过 Pages CMS 后台或提交 Markdown 文件发布。
         </p>
+      )
+    }
+
+    {
+      totalPages > 1 && (
+        <nav class="pagination">
+          {hasNext && (
+            <a class="pagination__link" href="/blog/page/2/">
+              下一页 →
+            </a>
+          )}
+          <span class="pagination__info">第 1 / {totalPages} 页</span>
+        </nav>
       )
     }
   </div>

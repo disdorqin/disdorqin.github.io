@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PostCard from '../../../components/PostCard.astro';
+import { getPublishedPosts } from '../../../utils/posts';
+
+export async function getStaticPaths() {
+  const PAGE_SIZE = 6;
+  const allPosts = await getPublishedPosts();
+  const totalPages = Math.ceil(allPosts.length / PAGE_SIZE);
+
+  return Array.from({ length: totalPages - 1 }, (_, i) => {
+    const pageNum = i + 2; // page 2, 3, ...
+    return {
+      params: { page: String(pageNum) },
+      props: { pageNum, totalPages, allPosts },
+    };
+  });
+}
+
+const { pageNum, totalPages, allPosts } = Astro.props;
+const PAGE_SIZE = 6;
+const start = (pageNum - 1) * PAGE_SIZE;
+const posts = allPosts.slice(start, start + PAGE_SIZE);
+const hasPrev = pageNum > 1;
+const hasNext = pageNum < totalPages;
+---
+
+<BaseLayout title={`博客 · 第 ${pageNum} 页`} description="全部文章列表">
+  <div class="container">
+    <h1 class="page-title">博客</h1>
+    <p class="page-subtitle">
+      共 {allPosts.length} 篇文章 · 第 {pageNum} / {totalPages} 页
+    </p>
+
+    {posts.map((post) => <PostCard post={post} />)}
+
+    <nav class="pagination">
+      {
+        hasPrev && (
+          <a class="pagination__link" href={pageNum === 2 ? '/blog/' : `/blog/page/${pageNum - 1}/`}>
+            ← 上一页
+          </a>
+        )
+      }
+      <span class="pagination__info">第 {pageNum} / {totalPages} 页</span>
+      {
+        hasNext && (
+          <a class="pagination__link" href={`/blog/page/${pageNum + 1}/`}>
+            下一页 →
+          </a>
+        )
+      }
+    </nav>
+  </div>
+</BaseLayout>

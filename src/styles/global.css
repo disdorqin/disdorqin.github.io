@@ -309,6 +309,18 @@ a.badge:hover {
   filter: brightness(1.06);
   color: #fff;
 }
+.btn--ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--accent);
+  padding: 0.2rem 0;
+}
+.btn--ghost:hover {
+  background: transparent;
+  color: var(--text);
+  border-color: transparent;
+  text-decoration: underline;
+}
 
 /* —— 区块标题 —— */
 .section {
@@ -575,4 +587,44 @@ html.dark .katex { color: var(--text); }
     grid-template-columns: 1fr;
   }
   .pager .next { text-align: left; }
+}
+
+/* —— 分页导航 —— */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.pagination__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: none;
+}
+.pagination__link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+.pagination__link--disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+.pagination__info {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  white-space: nowrap;
 }

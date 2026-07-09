@@ -2,15 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostCard from '../components/PostCard.astro';
 import { SITE } from '../config/site';
-import { getPublishedPosts, getPinnedPosts, getCategories } from '../utils/posts';
-import { encodeParam } from '../utils';
+import { getPublishedPosts } from '../utils/posts';
 
 const allPosts = await getPublishedPosts();
-const pinnedPosts = await getPinnedPosts();
-const latest = allPosts.slice(0, 5);
-const categories = getCategories(allPosts);
+const latest = allPosts.slice(0, 6);
+const hasMore = allPosts.length > 6;
 const githubUrl = `https://github.com/${SITE.githubUsername}`;
-const repoUrl = `https://github.com/${SITE.githubUsername}/${SITE.githubUsername}.github.io`;
 ---
 
 <BaseLayout>
@@ -21,44 +18,24 @@ const repoUrl = `https://github.com/${SITE.githubUsername}/${SITE.githubUsername
       <p class="hero__subtitle">科研、电力预测、项目日志与日常记录</p>
       <div class="hero__actions">
         <a class="btn btn--primary" href="/blog/">阅读博客</a>
-        <a class="btn" href={repoUrl} target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href={githubUrl} target="_blank" rel="noopener">GitHub</a>
         <a class="btn" href="/about/">关于</a>
       </div>
     </section>
 
-    <!-- 置顶文章 -->
-    {pinnedPosts.length > 0 && (
-      <section class="section">
-        <div class="section__head">
-          <h2 class="section__title">置顶</h2>
-        </div>
-        {pinnedPosts.map((post) => <PostCard post={post} />)}
-      </section>
-    )}
-
-    <!-- 最新文章 -->
+    <!-- 文章流 -->
     <section class="section">
       <div class="section__head">
-        <h2 class="section__title">最新文章</h2>
-        <a class="section__more" href="/blog/">全部 →</a>
+        <h2 class="section__title">最近发布</h2>
       </div>
       {latest.map((post) => <PostCard post={post} />)}
-    </section>
-
-    <!-- 分类入口 -->
-    <section class="section">
-      <div class="section__head">
-        <h2 class="section__title">分类</h2>
-        <a class="section__more" href="/categories/">全部 →</a>
-      </div>
-      <div class="chip-cloud">
-        {categories.map((c) => (
-          <a class="badge badge--accent" href={`/categories/${encodeParam(c.name)}/`}>
-            {c.name} · {c.count}
-          </a>
-        ))}
-        <a class="badge" href="/tags/">浏览标签 →</a>
-      </div>
+      {
+        hasMore && (
+          <div style="margin-top:1.2rem;text-align:right">
+            <a class="btn btn--ghost" href="/blog/page/2/">下一页 →</a>
+          </div>
+        )
+      }
     </section>
   </div>
 </BaseLayout>
