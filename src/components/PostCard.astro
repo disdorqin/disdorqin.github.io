@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { formatDate, readingTime, encodeParam } from '../utils';
+import { formatDate, readingTime } from '../utils';
 
 interface Props {
   post: CollectionEntry<'blog'>;
@@ -27,8 +27,6 @@ const url = `/blog/${post.id}/`;
     </h3>
     <div class="post-card__meta">
       <time datetime={pubDate.toISOString()}>{formatDate(pubDate)}</time>
-      <span>·</span>
-      <a href={`/categories/${encodeParam(category)}/`}>{category}</a>
       <span>·</span>
       <span>{minutes} 分钟阅读</span>
     </div>

@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Toc from '../../components/Toc.astro';
 import WalineComment from '../../components/WalineComment.astro';
 import { getPublishedPosts, type Post } from '../../utils/posts';
-import { formatDate, readingTime, encodeParam } from '../../utils';
+import { formatDate, readingTime } from '../../utils';
 
 export async function getStaticPaths() {
   const posts = await getPublishedPosts();
@@ -25,7 +25,7 @@ interface Props {
 }
 const { post, older, newer } = Astro.props;
 const { Content, headings } = await render(post);
-const { title, description, pubDate, updatedDate, category, tags, cover } = post.data;
+const { title, description, pubDate, updatedDate, cover } = post.data;
 const minutes = readingTime(post.body ?? description);
 ---
 
@@ -44,14 +44,6 @@ const minutes = readingTime(post.body ?? description);
           {post.data.pinned && <span class="badge badge--accent">置顶</span>}
         </div>
         <h1 class="article-header__title" data-pagefind-meta="title">{title}</h1>
-        <div class="article-meta">
-          <a class="badge badge--accent" href={`/categories/${encodeParam(category)}/`}>{category}</a>
-          {
-            tags.map((t) => (
-              <a class="badge" href={`/tags/${encodeParam(t)}/`}>#{t}</a>
-            ))
-          }
-        </div>
       </header>
 
       {

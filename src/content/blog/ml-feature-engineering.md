@@ -1,13 +1,13 @@
 ---
 title: 特征工程与类别编码实战
 description: 梳理高基数类别、周期特征与泄漏防御的常用技巧，附可直接复用的代码片段。
-pubDate: 2026-06-28
+pubDate: 2026-04-16
 category: 机器学习
 tags:
   - 特征工程
   - 类别编码
   - 实战
-cover: /uploads/cover-ml.svg
+cover: /uploads/cover-ml.jpg
 draft: false
 pinned: false
 ---
