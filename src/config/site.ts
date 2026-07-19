@@ -17,6 +17,7 @@ export const SITE = {
   nav: [
     { label: '首页', href: '/' },
     { label: '博客', href: '/blog/' },
+    { label: 'ECUST', href: '/ecust/' },
     { label: '归档', href: '/moments/' },
     { label: '分类', href: '/categories/' },
     { label: '标签', href: '/tags/' },
