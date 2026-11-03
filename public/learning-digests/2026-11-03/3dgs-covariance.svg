@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 410" role="img" aria-label="Gaussian covariance controls ellipse scale and orientation">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#f8fbff"/><stop offset="1" stop-color="#f2f6ff"/></linearGradient></defs>
+<rect width="1100" height="410" rx="20" fill="url(#g)"/>
+<text x="44" y="52" fill="#233e68" font-size="25" font-weight="700" font-family="Arial,Noto Sans SC,sans-serif">Covariance controls shape and orientation</text>
+<text x="44" y="79" fill="#5c6e87" font-size="14" font-family="Arial,Noto Sans SC,sans-serif">2D cross-sections of equal-density surfaces · conceptual geometry</text>
+<g font-family="Arial,Noto Sans SC,sans-serif" text-anchor="middle">
+<g transform="translate(180 215)"><path d="M-108 0H108M0-110V110" stroke="#bccde5" stroke-width="2"/><circle r="65" fill="#88a7fa" fill-opacity=".35" stroke="#527bd3" stroke-width="3"/><circle r="4.5" fill="#284b8c"/></g>
+<g transform="translate(550 215)"><path d="M-108 0H108M0-110V110" stroke="#bccde5" stroke-width="2"/><ellipse rx="99" ry="40" fill="#5fd0aa" fill-opacity=".36" stroke="#299974" stroke-width="3"/><circle r="4.5" fill="#1e7759"/></g>
+<g transform="translate(910 215)"><path d="M-108 0H108M0-110V110" stroke="#bccde5" stroke-width="2"/><ellipse rx="99" ry="40" fill="#efb76e" fill-opacity=".42" stroke="#c88a39" stroke-width="3" transform="rotate(-35)"/><circle r="4.5" fill="#9d6829"/></g>
+<text x="180" y="345" font-size="18" font-weight="700" fill="#34496b">Isotropic</text><text x="180" y="367" font-size="13" fill="#64748b">Same variance on every axis</text>
+<text x="550" y="345" font-size="18" font-weight="700" fill="#34496b">Anisotropic scaling</text><text x="550" y="367" font-size="13" fill="#64748b">Different principal-axis scales</text>
+<text x="910" y="345" font-size="18" font-weight="700" fill="#34496b">Rotation + scaling</text><text x="910" y="367" font-size="13" fill="#64748b">Principal directions rotated</text>
+</g>
+</svg>

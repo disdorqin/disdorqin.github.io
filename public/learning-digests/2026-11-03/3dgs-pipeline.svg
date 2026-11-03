@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 386" role="img" aria-label="3D Gaussian Splatting workflow diagram">
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7faff"/><stop offset="1" stop-color="#eaf1ff"/></linearGradient>
+ <filter id="shadow"><feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#38517c" flood-opacity=".10"/></filter>
+ <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6Z" fill="#64748b"/></marker>
+</defs>
+<rect width="1200" height="386" rx="22" fill="url(#bg)"/>
+<text x="42" y="56" font-family="Arial,Noto Sans SC,sans-serif" font-size="26" font-weight="700" fill="#1e3150">3D Gaussian Splatting · Conceptual pipeline</text>
+<text x="42" y="83" font-family="Arial,Noto Sans SC,sans-serif" font-size="15" fill="#526482">Geometry from views → Gaussian parameters → screen-space rendering</text>
+<g font-family="Arial,Noto Sans SC,sans-serif">
+<g filter="url(#shadow)"><rect x="42" y="118" width="203" height="210" rx="16" fill="#fff"/><rect x="272" y="118" width="203" height="210" rx="16" fill="#fff"/><rect x="502" y="118" width="203" height="210" rx="16" fill="#fff"/><rect x="732" y="118" width="203" height="210" rx="16" fill="#fff"/><rect x="962" y="118" width="196" height="210" rx="16" fill="#fff"/></g>
+<g fill="#234b87" font-size="17" font-weight="700" text-anchor="middle"><text x="143" y="293">Photographs</text><text x="374" y="293">Sparse points (SfM)</text><text x="604" y="293">3D Gaussians</text><text x="833" y="293">2D splats &amp; tiles</text><text x="1060" y="293">Novel view</text></g>
+<g fill="#64748b" font-size="13" text-anchor="middle"><text x="143" y="313">Multi-view input</text><text x="374" y="313">Camera calibration</text><text x="604" y="313">Position · shape · color</text><text x="833" y="313">Sort and blend</text><text x="1060" y="313">Rendered pixels</text></g>
+<g stroke="#64748b" stroke-width="2.4" fill="none" marker-end="url(#arrow)"><path d="M247 229H269"/><path d="M477 229H499"/><path d="M707 229H729"/><path d="M937 229H959"/></g>
+<!-- multi-view cards -->
+<rect x="100" y="162" width="77" height="73" rx="6" fill="#dce9ff" stroke="#6092d0" stroke-width="2" transform="rotate(-10 138 198)"/>
+<rect x="113" y="159" width="77" height="73" rx="6" fill="#e3eaff" stroke="#6092d0" stroke-width="2" transform="rotate(8 151 195)"/>
+<path d="M129 218l17-31 15 19 13-14 14 26" stroke="#45846c" stroke-width="4" fill="none"/>
+<circle cx="162" cy="177" r="7" fill="#efad55"/>
+<!-- point cloud -->
+<g fill="#5078ba"><circle cx="339" cy="191" r="3"/><circle cx="348" cy="183" r="4"/><circle cx="360" cy="201" r="3"/><circle cx="370" cy="168" r="3"/><circle cx="395" cy="179" r="4"/><circle cx="386" cy="208" r="3"/><circle cx="405" cy="198" r="4"/><circle cx="421" cy="189" r="3"/><circle cx="367" cy="224" r="3"/><circle cx="416" cy="227" r="3"/><circle cx="343" cy="217" r="3"/><circle cx="392" cy="229" r="3"/><circle cx="380" cy="188" r="3"/><circle cx="362" cy="180" r="2"/><circle cx="414" cy="210" r="3"/></g>
+<!-- gaussians -->
+<g opacity=".77"><ellipse cx="571" cy="185" rx="39" ry="18" fill="#8b9cf5" transform="rotate(-30 571 185)"/><ellipse cx="613" cy="200" rx="41" ry="24" fill="#55c9b3" transform="rotate(28 613 200)"/><ellipse cx="646" cy="176" rx="28" ry="42" fill="#f5b35b" transform="rotate(60 646 176)"/></g>
+<!-- tiled splats -->
+<rect x="788" y="155" width="92" height="91" rx="5" fill="#eef5ff" stroke="#789aca" stroke-width="2"/>
+<g stroke="#d0def4" stroke-width="1"><path d="M811 155v91M834 155v91M857 155v91M788 178h92M788 201h92M788 224h92"/></g>
+<ellipse cx="821" cy="190" rx="30" ry="16" fill="#849cf1" opacity=".72" transform="rotate(-25 821 190)"/><ellipse cx="846" cy="207" rx="23" ry="30" fill="#64c8a8" opacity=".62"/>
+<!-- pixels -->
+<rect x="1019" y="158" width="86" height="85" rx="6" fill="#d8e8fa"/>
+<rect x="1027" y="167" width="35" height="28" rx="4" fill="#659eb1"/><rect x="1065" y="167" width="31" height="28" rx="4" fill="#f0b766"/>
+<rect x="1027" y="198" width="35" height="35" rx="4" fill="#607fd0"/><rect x="1065" y="198" width="31" height="35" rx="4" fill="#60b597"/>
+</g>
+<text x="600" y="362" fill="#75839a" font-family="Arial,Noto Sans SC,sans-serif" font-size="13" text-anchor="middle">Original teaching illustration · not an experimental measurement</text>
+</svg>
