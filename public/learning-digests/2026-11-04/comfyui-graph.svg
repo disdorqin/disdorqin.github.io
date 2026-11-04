@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 414" role="img" aria-label="ComfyUI computational graph educational schematic">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f3f8ff"/><stop offset="1" stop-color="#f8f6ff"/></linearGradient><filter id="shadow"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#334e82" flood-opacity=".12"/></filter><marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6Z" fill="#6b7c97"/></marker></defs>
+<rect width="1180" height="414" rx="18" fill="url(#bg)"/>
+<text x="44" y="56" fill="#183768" font-size="26" font-family="Arial,Noto Sans SC,sans-serif" font-weight="700">Why a workflow is a graph</text>
+<text x="44" y="82" fill="#5b7394" font-size="14" font-family="Arial,Noto Sans SC,sans-serif">Conceptual example — nodes are reusable functions, wires carry typed data</text>
+<g font-family="Arial,Noto Sans SC,sans-serif" filter="url(#shadow)">
+ <rect x="65" y="158" width="225" height="116" rx="13" fill="#fff" stroke="#6c95d6" stroke-width="2"/>
+ <rect x="355" y="109" width="225" height="110" rx="13" fill="#fff" stroke="#67b7a4" stroke-width="2"/>
+ <rect x="355" y="252" width="225" height="110" rx="13" fill="#fff" stroke="#e7a861" stroke-width="2"/>
+ <rect x="665" y="159" width="225" height="116" rx="13" fill="#fff" stroke="#8b85d0" stroke-width="2"/>
+ <rect x="963" y="159" width="166" height="116" rx="13" fill="#fff" stroke="#7490be" stroke-width="2"/>
+</g>
+<g font-family="Arial,Noto Sans SC,sans-serif" text-anchor="middle">
+ <g font-size="18" font-weight="700" fill="#264770"><text x="178" y="204">Input data</text><text x="467" y="155">Conditioning</text><text x="467" y="297">Model / state</text><text x="778" y="206">Processing</text><text x="1045" y="206">Output</text></g>
+ <g font-size="13" fill="#687891"><text x="178" y="233">Prompt · image · parameters</text><text x="467" y="182">Typed upstream signals</text><text x="467" y="324">Reusable resources</text><text x="778" y="233">Combine upstream data</text><text x="1045" y="233">Preview · save</text></g>
+</g>
+<g fill="none" stroke="#7489a7" stroke-width="3" marker-end="url(#arrow)"><path d="M290 206 C318 206 315 163 353 163"/><path d="M290 230 C330 230 320 303 353 303"/><path d="M580 166 C632 166 608 206 661 206"/><path d="M580 307 C629 307 606 229 661 229"/><path d="M892 216 H959"/></g>
+<text x="593" y="388" text-anchor="middle" fill="#8190a6" font-family="Arial,Noto Sans SC,sans-serif" font-size="13">Original illustration · graph logic, not importable ComfyUI workflow JSON</text>
+</svg>
