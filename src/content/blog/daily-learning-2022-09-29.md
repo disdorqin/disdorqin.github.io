@@ -1,7 +1,7 @@
 ---
 title: "编译原理从零入门：正则表达式、NFA、DFA 与词法分析器为什么能自动生成"
 description: "从源代码和 Token 出发，逐步讲透正则表达式、ε-NFA、子集构造、DFA、最长匹配、数字与范围符，并连接到真实词法分析器生成工具。"
-pubDate: 2026-11-04
+pubDate: 2022-09-29
 archiveDate: 2022-09-29
 category: "科研笔记"
 tags: ["编译原理", "自动机", "DFA", "NFA", "词法分析", "程序语言"]
@@ -284,7 +284,7 @@ C/C++ 风格输入函数的一些接口还需要特别区分整型 EOF 返回值
 ### 资料来源与边界
 
 1. [Robert Nystrom, Crafting Interpreters — Scanning](https://craftinginterpreters.com/scanning.html)：用于核对 Token、词素、数字与保留字、最长匹配及扫描器接口。
-2. [Cornell CS 4120 编译课程公开笔记](https://www.cs.cornell.edu/courses/cs4120/2026sp/notes/)：用于核对正规表达式、NFA、DFA、自动词法分析与生成器的基本原理。
+2. [Cornell CS 4120 编译课程公开笔记](https://www.cs.cornell.edu/courses/cs4120/2022sp/notes/)：用于核对正规表达式、NFA、DFA、自动词法分析与生成器的基本原理。
 3. [LLVM — My First Language Frontend Tutorial](https://llvm.org/docs/tutorial/MyFirstLanguageFrontend/)：用于理解 Kaleidoscope 的手写扫描器如何衔接语法分析与 LLVM IR。
 4. [LLVM Kaleidoscope Tutorial Contents](https://www.llvm.org/docs/tutorial/index.html)：用于核对相关编译器章节的学习顺序。
 5. 正则表达式示例、状态编号、三张图、小语言范围符规则及测试样例均为原创教学构造。不同语言可采用不同词法规定，本文不声称所有词法分析器对上述边界文本给出完全一致的结果。
