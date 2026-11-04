@@ -1,7 +1,7 @@
 ---
 title: "本科生第一篇科研论文：从找导师、读文献到真正写出可复现的研究"
 description: "给第一次做计算机科研的本科生一份可执行的完整路线：找方向和导师、搭建论文地图、复现公开基线、提出可反驳问题、设计实验、写论文、处理署名和投稿。"
-pubDate: 2026-11-04
+pubDate: 2024-09-15
 archiveDate: 2024-09-15
 category: "科研笔记"
 tags: ["本科生科研", "第一篇论文", "导师沟通", "文献阅读", "科研复现", "实验设计"]
@@ -287,7 +287,7 @@ $$
 3. [Stanford Undergraduate Research — Writing a Project Proposal](https://undergradresearch.stanford.edu/apply/writing-project-proposal)：研究提案的问题、重要性和实现路径，以及使用 AI 的边界。
 4. [Purdue OWL — Writing a Literature Review](https://owl.purdue.edu/owl/research_and_citation/conducting_research/writing_a_literature_review.html)：文献综合、主题分类和批判性讨论。
 5. [MIT UROP — Responsible and Ethical Conduct of Research](https://urop.mit.edu/guidelines/rcr/)：学术诚信、数据与合作责任的一般指导。
-6. [ICML 2026 — Reviewer Instructions](https://icml.cc/Conferences/2026/ReviewerInstructions)：作为机器学习会议评审尺度示例，涉及原创性、严谨性、表达和意义；并非所有研究领域共用一套标准。
+6. [ICML 2024 — Reviewer Instructions](https://icml.cc/Conferences/2024/ReviewerInstructions)：作为机器学习会议评审尺度示例，涉及原创性、严谨性、表达和意义；并非所有研究领域共用一套标准。
 7. 本文的时间序列研究情景、配对差异数值、阶段路线与三张教学图为原创示例，未声称完成具体论文录用或真实新实验；正式工作应遵守所在学校、合作项目与目标会议的政策。
 
 这篇课程不承诺速成一篇论文，却提供了一条可检验的起步方法：找到真实问题、取得原始证据、建立合法基线、提出可反驳假设、完成受控实验，再把已经被验证的结论交给读者审查。做到这一点，你已经真正开始科研，而不仅仅是在学习如何写一篇看起来像论文的文章。
