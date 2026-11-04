@@ -1,7 +1,7 @@
 ---
 title: "AI 辅助写 ICML 论文：从研究证据到八页主文的完整实操课"
 description: "围绕 ICML 官方投稿与作者责任规则，演示如何让 AI 协助阅读、起草、制图、LaTeX 排版、参考文献核验、匿名化审查和最终质量把关。"
-pubDate: 2026-11-04
+pubDate: 2026-10-05
 archiveDate: 2026-10-28
 category: "科研笔记"
 tags: ["ICML", "论文写作", "科研方法", "AI辅助", "LaTeX", "实验复现"]
