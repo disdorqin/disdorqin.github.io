@@ -1,7 +1,8 @@
 ---
 title: "每日学习笔记｜ComfyUI：为什么节点和连线是一种真正的工作流？"
 description: "从B站工作流拆解教程出发，用两张原创示意图和计算图公式解释节点、数据依赖、复用、局部重算与结果验收。"
-pubDate: 2026-11-04
+pubDate: 2025-12-18
+archiveDate: 2026-11-04
 category: 科研笔记
 tags: [ComfyUI, 工作流, 节点图, 自动化, 学习笔记]
 cover: https://disdorqin.cn/learning-digests/2026-11-04/comfyui-graph.svg
