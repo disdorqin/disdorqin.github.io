@@ -1,7 +1,8 @@
 ---
 title: "每日学习笔记｜把科研自动化拆成五层：Agent、Skill、MCP 与知识库"
 description: "结合真实B站科研工作流视频及官方规范，理解五层分工、证据门禁和可复现的科研自动化闭环。"
-pubDate: 2026-11-02
+pubDate: 2026-10-23
+archiveDate: 2026-11-02
 category: 科研笔记
 tags: [Agent, Skill, MCP, RAG, 知识库, 工作流]
 cover: https://disdorqin.cn/learning-digests/2026-11-02/research-five-layers.svg
@@ -9,7 +10,7 @@ draft: false
 pinned: false
 ---
 
-> **回填学习笔记 · 2026 年 11 月 2 日。** 本文参考一段真实 B站科研工作流教程：本地取得完整音频、290 条带时间戳的 ASR 字幕，抽取并复核了关键画面。还对照 MCP 官方文档及 Agent Skills 规范。ASR 有误听，视频里“效率翻倍、少走 99% 弯路”的营销说法也没有独立测量证据。
+> **科研自动化专题学习笔记。** 本文参考一段真实 B站科研工作流教程：本地取得完整音频、290 条带时间戳的 ASR 字幕，抽取并复核了关键画面。还对照 MCP 官方文档及 Agent Skills 规范。ASR 有误听，视频里“效率翻倍、少走 99% 弯路”的营销说法也没有独立测量证据。
 
 ## 一、为什么科研需要工作流，而不是同时找五个 Agent 聊天？
 
