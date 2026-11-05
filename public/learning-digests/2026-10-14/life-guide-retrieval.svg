@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 690" role="img" aria-label="BM25F多字段检索、查询扩展、RRF融合及完整条目核验">
+<rect width="1200" height="690" fill="#f7fafc"/><text x="65" y="75" font-size="32" fill="#163449" font-weight="700">一句自然语言，为什么需要三路检索？</text><text x="65" y="113" font-size="20" fill="#6a798b">示意问题：我午休后还是困，怎样安排？</text>
+<rect x="65" y="147" width="1070" height="77" rx="14" fill="#153e60"/><text x="100" y="196" font-size="26" fill="#fff" font-weight="700">自然问题 → NFKC / 中文二三字片段 / 近义词主题识别</text>
+<g font-family="Arial, Noto Sans CJK SC, sans-serif">
+<rect x="65" y="272" width="316" height="171" rx="16" fill="#e8f2fd" stroke="#80a9d1" stroke-width="2"/><text x="89" y="313" font-size="23" fill="#225c8e" font-weight="700">路径 A · 原始问题</text><text x="89" y="357" font-size="21" fill="#315c7b">保留“午休”“困”等原词</text><text x="89" y="397" font-size="19" fill="#315c7b">权重 1.0 · 避免丢失细节</text>
+<rect x="442" y="272" width="316" height="171" rx="16" fill="#edf8f0" stroke="#81bb9a" stroke-width="2"/><text x="467" y="313" font-size="23" fill="#277250" font-weight="700">路径 B · 扩展问题</text><text x="467" y="357" font-size="21" fill="#326d56">午休 → 午睡 / 犯困</text><text x="467" y="397" font-size="19" fill="#326d56">权重 0.7 · 扩展词降权</text>
+<rect x="819" y="272" width="316" height="171" rx="16" fill="#fff2e6" stroke="#d4a577" stroke-width="2"/><text x="846" y="313" font-size="23" fill="#955b29" font-weight="700">路径 C · 主题词</text><text x="846" y="357" font-size="21" fill="#9a6336">只看规范主题，去杂词</text><text x="846" y="397" font-size="19" fill="#9a6336">权重 1.0 · 强化主题</text>
+<path d="M225 443 L225 489 L600 519 M600 443 L600 519 M973 443 L973 489 L600 519" stroke="#728399" stroke-width="4" fill="none"/><path d="M600 525 l-9 -14 h18z" fill="#728399"/>
+<rect x="223" y="524" width="755" height="91" rx="16" fill="#eae4fa" stroke="#a795cc" stroke-width="2"/><text x="253" y="563" font-size="25" fill="#604a88" font-weight="700">RRF：按名次合并三路候选，再做规则重排</text><text x="253" y="595" font-size="19" fill="#6d6190">条目完整读回 + 备注与证据检查，不把检索分数当概率</text>
+<text x="65" y="654" font-size="18" fill="#667587">原版技术路径：BM25F 每路召回 → RRF(k=60) → 覆盖度重排 → 上下文核验</text>
+</g></svg>
