@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 430" role="img" aria-label="Adaptive sampling timeline with uniform frame sampling and additional event-focused frames">
+<rect width="1250" height="430" rx="22" fill="#f5f9ff"/>
+<g font-family="Arial,Noto Sans SC,sans-serif"><text x="43" y="56" font-size="27" fill="#1f3b66" font-weight="700">Sampling less, seeing what matters</text>
+<text x="43" y="84" font-size="14" fill="#607995">Conceptual timeline (0–10 minutes), not measurement from an actual video</text>
+<g fill="none" stroke="#c4d2e5" stroke-width="2"><path d="M110 151H1140M110 251H1140M110 344H1140"/></g>
+<g fill="#334f75" font-size="16"><text x="40" y="157">Uniform</text><text x="40" y="258">Changes</text><text x="40" y="352">Refine</text></g>
+<g fill="#5c7dce"><circle cx="110" cy="151" r="8"/><circle cx="189" cy="151" r="8"/><circle cx="268" cy="151" r="8"/><circle cx="348" cy="151" r="8"/><circle cx="427" cy="151" r="8"/><circle cx="506" cy="151" r="8"/><circle cx="585" cy="151" r="8"/><circle cx="665" cy="151" r="8"/><circle cx="744" cy="151" r="8"/><circle cx="823" cy="151" r="8"/><circle cx="902" cy="151" r="8"/><circle cx="982" cy="151" r="8"/><circle cx="1061" cy="151" r="8"/><circle cx="1140" cy="151" r="8"/></g>
+<g fill="#e9a552"><circle cx="270" cy="251" r="10"/><circle cx="495" cy="251" r="10"/><circle cx="820" cy="251" r="10"/><circle cx="990" cy="251" r="10"/></g>
+<g fill="#57ae8c"><circle cx="454" cy="344" r="10"/><circle cx="477" cy="344" r="10"/><circle cx="500" cy="344" r="10"/><circle cx="523" cy="344" r="10"/><circle cx="546" cy="344" r="10"/><circle cx="949" cy="344" r="9"/><circle cx="973" cy="344" r="9"/><circle cx="997" cy="344" r="9"/></g>
+<g fill="#71869f" font-size="13" text-anchor="middle"><text x="110" y="395">0:00</text><text x="625" y="395">5:00</text><text x="1140" y="395">10:00</text></g>
+<rect x="400" y="195" width="166" height="185" rx="12" fill="#57ae8c" opacity=".08"/><rect x="922" y="195" width="110" height="185" rx="12" fill="#57ae8c" opacity=".08"/>
+<text x="625" y="212" font-size="13" fill="#8a6a3b" text-anchor="middle">Scene changes trigger closer inspection</text>
+<text x="625" y="412" text-anchor="middle" fill="#65798f" font-size="12">Blue: baseline intervals · Orange: scene changes · Green: local close-up frames</text></g>
+</svg>
