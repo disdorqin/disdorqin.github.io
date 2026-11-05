@@ -1,7 +1,8 @@
 ---
 title: "每日学习笔记｜RAG 不是向量数据库：检索、证据与幻觉控制"
 description: "从 Retrieval-Augmented Generation 原论文出发，厘清检索增强生成的概率含义、召回与引用验证，并给出一套可以动手检查的最小实验。"
-pubDate: 2026-11-01
+pubDate: 2026-10-20
+archiveDate: 2026-11-01
 category: 科研笔记
 tags: [RAG, 知识库, 大模型, 科研方法, 信息检索]
 cover: https://disdorqin.cn/learning-digests/2026-11-01/rag-evidence-pipeline.svg
@@ -9,7 +10,7 @@ draft: false
 pinned: false
 ---
 
-> **回填学习笔记 · 2026 年 11 月 1 日。** 这是按学习时间线整理的技术笔记，不是当日科技新闻。主要依据 Lewis 等人 2020 年的 RAG 论文、公开技术资料和已获得字幕的相关 B站教程。YouTube 的 LangChain 教程可作为延伸视频，但本次没有成功读取它的完整字幕，因此不将其讲解内容当作本文的直接证据。
+> **RAG 专题学习笔记。** 这是按学习时间线整理的技术笔记，不是当日科技新闻。主要依据 Lewis 等人 2020 年的 RAG 论文、公开技术资料和已获得字幕的相关 B站教程。YouTube 的 LangChain 教程可作为延伸视频，但本次没有成功读取它的完整字幕，因此不将其讲解内容当作本文的直接证据。
 
 ## 一、为什么让模型“查资料”，仍可能回答错误？
 
