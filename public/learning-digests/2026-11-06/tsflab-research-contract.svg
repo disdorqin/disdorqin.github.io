@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 580" role="img" aria-labelledby="title desc">
+<title id="title">科研任务合同与四级错误审查</title>
+<desc id="desc">从任务合同，到配置验证、真实运行、独立审查和结论限制；不同层的失败分别诊断。</desc>
+<rect width="1050" height="580" rx="24" fill="#f8fafc"/>
+<text x="55" y="60" font-size="30" fill="#173451" font-family="sans-serif" font-weight="bold">研究工作台不是模型排行榜</text>
+<text x="55" y="95" font-size="18" fill="#5b728a" font-family="sans-serif">任务合同 → 统一执行 → 可复核证据 → 有条件的结论</text>
+<g font-family="sans-serif" text-anchor="middle">
+<rect x="60" y="139" width="930" height="89" rx="14" fill="#e1edff" stroke="#80a7d5" stroke-width="2"/>
+<text x="525" y="169" fill="#204976" font-size="24" font-weight="bold">任务合同：预测起点、数据可用时间、切分、指标</text>
+<text x="525" y="204" fill="#526a86" font-size="18">不可变条件先固定；探索参数和模型结构可以变动</text>
+<rect x="70" y="285" width="272" height="104" rx="15" fill="#edf1ff" stroke="#a1a9dc" stroke-width="2"/>
+<text x="206" y="326" fill="#283b80" font-size="22">配置检查</text><text x="206" y="358" fill="#5869a5" font-size="16">避免时间边界与字段错误</text>
+<rect x="389" y="285" width="272" height="104" rx="15" fill="#fef1de" stroke="#dcb27f" stroke-width="2"/>
+<text x="525" y="326" fill="#815627" font-size="22">真实实验</text><text x="525" y="358" fill="#9a7544" font-size="16">记录环境、失败和全部尝试</text>
+<rect x="708" y="285" width="272" height="104" rx="15" fill="#e3f4e8" stroke="#8dbe9c" stroke-width="2"/>
+<text x="844" y="326" fill="#2d6845" font-size="22">独立审查</text><text x="844" y="358" fill="#518362" font-size="16">核对评估协议与原始记录</text>
+</g>
+<g fill="none" stroke="#6685a0" stroke-width="3"><path d="M525 228 V257 H206 V276"/><path d="M525 257 V276"/><path d="M525 257 H844 V276"/><path d="M342 336 H380"/><path d="M661 336 H699"/></g>
+<g fill="#6685a0"><path d="M199 276 l7 9 7 -9z"/><path d="M518 276 l7 9 7 -9z"/><path d="M837 276 l7 9 7 -9z"/><path d="M380 330 l9 6 -9 6z"/><path d="M699 330 l9 6 -9 6z"/></g>
+<rect x="70" y="443" width="910" height="89" rx="14" fill="#e8edf3"/><text x="90" y="479" font-size="21" fill="#274159" font-family="sans-serif">输出：成功条件、失败停止条件、证据版本、适用范围</text><text x="90" y="512" font-size="17" fill="#556b7e" font-family="sans-serif">论文作者报告 ≠ 本人算术复核 ≠ 新数据独立复现实验</text>
+</svg>
