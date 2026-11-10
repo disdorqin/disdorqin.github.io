@@ -1,0 +1,52 @@
+name: Blog quality gate
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# PR checks never publish or access deployment credentials.
+permissions:
+  contents: read
+
+concurrency:
+  group: blog-quality-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Preflight, learning articles and Astro build
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout full history for PR diff
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Existing site preflight
+        run: npm run preflight
+
+      - name: Check new published daily-learning posts
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+        run: node scripts/check-new-learning-posts.mjs
+
+      - name: Build Astro and Pagefind
+        run: npm run build
+
+      - name: Confirm generated site and search index
+        run: |
+          test -s dist/index.html
+          test -s dist/blog/index.html
+          test -s dist/pagefind/pagefind.js
