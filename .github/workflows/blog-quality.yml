@@ -39,7 +39,7 @@ jobs:
 
       - name: Check new published daily-learning posts
         env:
-          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          CHECK_BASE_SHA: ${{ github.event.pull_request.base.sha }}
         run: node scripts/check-new-learning-posts.mjs
 
       - name: Build Astro and Pagefind
