@@ -21,12 +21,12 @@ function selectedFiles() {
     }
     return [process.argv[3]];
   }
-  const base = process.env.PR_BASE_SHA ?? '';
+  const base = process.env.CHECK_BASE_SHA ?? '';
   if (!base && process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') {
     console.log('Manual CI run: no PR diff; existing preflight/build still run.');
     return [];
   }
-  if (!/^[a-f0-9]{40}$/i.test(base)) throw new Error('Pull request base SHA is required (fetch-depth: 0).');
+  if (!/^[a-f0-9]{40}$/i.test(base)) throw new Error('Valid comparison base SHA is required for pull requests and pushes (fetch-depth: 0).');
   const output = git('diff', '--name-status', '-z', '--diff-filter=AM', base + '...HEAD', '--', blogPrefix);
   const items = output.split('\0').filter(Boolean);
   const files = [];
