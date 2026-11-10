@@ -24,6 +24,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -36,6 +38,12 @@ jobs:
 
       - name: Preflight checks
         run: npm run preflight
+
+      # Daily publisher pushes directly to main; enforce the same gate here as on PRs.
+      - name: Check new published daily-learning posts
+        env:
+          CHECK_BASE_SHA: ${{ github.event.before }}
+        run: node scripts/check-new-learning-posts.mjs
 
       - name: Build
         run: npm run build
