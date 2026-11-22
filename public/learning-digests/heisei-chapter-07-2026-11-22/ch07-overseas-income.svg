@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 610" role="img" aria-label="经常项目分为商品和服务贸易余额、初次收入净额和二次收入净额，商品贸易逆差不代表经常项目必然逆差">
+<rect width="1200" height="610" rx="28" fill="#122237"/>
+<text x="55" y="70" fill="#f5f9ff" font-size="31" font-family="sans-serif" font-weight="700">从「出口立国」到「投资收入」：会计上怎样成立？</text>
+<text x="57" y="108" fill="#b7cbe0" font-size="17" font-family="sans-serif">成熟债权国可以通过海外资产收入弥补部分贸易逆差，但不保证所有居民获益</text>
+<rect x="54" y="158" width="1091" height="98" rx="18" fill="#27425f"/>
+<text x="600" y="200" text-anchor="middle" fill="#f6f9ff" font-size="28" font-family="sans-serif" font-weight="700">经常项目余额 CA</text>
+<text x="600" y="231" text-anchor="middle" fill="#c4def3" font-size="17" font-family="sans-serif">商品与服务余额 + 初次收入净额 + 二次收入净额</text>
+<g stroke="#7b96b0" stroke-width="3" fill="none"><path d="M600 259 V298"/><path d="M212 298 H990"/><path d="M212 298 V326 M600 298 V326 M990 298 V326"/></g>
+<g font-family="sans-serif"><rect x="57" y="326" width="312" height="203" rx="19" fill="#214b70" stroke="#78b6dd" stroke-width="2"/><text x="82" y="372" fill="#bce4ff" font-size="23" font-weight="700">商品与服务余额</text><text x="82" y="414" fill="#f1f8ff" font-size="18">出口减进口</text><text x="82" y="453" fill="#d0e5f4" font-size="17">可能出现逆差</text><text x="82" y="487" fill="#a5cae6" font-size="16">不能独立代表 CA</text>
+<rect x="444" y="326" width="312" height="203" rx="19" fill="#285746" stroke="#82c8a4" stroke-width="2"/><text x="469" y="372" fill="#c1f3d8" font-size="23" font-weight="700">初次收入净额</text><text x="469" y="414" fill="#f1fff8" font-size="18">海外股息、利息、收益等</text><text x="469" y="453" fill="#d0eee0" font-size="17">依赖境外资产与盈利</text><text x="469" y="487" fill="#b7dfc8" font-size="16">非无风险、非人人平均</text>
+<rect x="831" y="326" width="312" height="203" rx="19" fill="#5b4930" stroke="#d4b27c" stroke-width="2"/><text x="856" y="372" fill="#ffe7b8" font-size="23" font-weight="700">二次收入净额</text><text x="856" y="414" fill="#fff7e6" font-size="18">经常性转移项目</text><text x="856" y="453" fill="#eedec2" font-size="17">按国际收支定义统计</text><text x="856" y="487" fill="#dfc8a0" font-size="16">与资本账户不同</text></g>
+<text x="1138" y="587" text-anchor="end" fill="#8da3ba" font-size="13" font-family="sans-serif">原创会计示意｜日本财务省国际投资头寸 · 日本银行国际收支统计</text></svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="贸易余额等于出口减进口，2011年日本出口受供应链冲击，进口燃料需求上升，贸易差额的变化不能等同于GDP损失">
+<rect width="1200" height="600" rx="28" fill="#fafbfe"/><text x="55" y="69" font-size="30" font-weight="700" font-family="sans-serif" fill="#1e3047">贸易差额的变化，不等于地震造成的经济损失</text><text x="59" y="109" font-size="17" font-family="sans-serif" fill="#63778d">出口与进口来自不同经济活动；贸易顺差或逆差不能直接替代 GDP / 国民福利</text>
+<rect x="68" y="155" width="486" height="200" rx="23" fill="#e5f0fc" stroke="#7ba9db" stroke-width="2"/>
+<rect x="647" y="155" width="486" height="200" rx="23" fill="#fff0df" stroke="#d9a572" stroke-width="2"/>
+<g font-family="sans-serif" text-anchor="middle"><text x="311" y="203" fill="#215c90" font-size="24" font-weight="700">出口 X</text><text x="311" y="247" fill="#305772" font-size="19">关键零部件与电力不足</text><text x="311" y="287" fill="#305772" font-size="18">汽车等制造品交付减少</text><text x="311" y="327" fill="#56758d" font-size="16">数量、单价、汇率要分开</text>
+<text x="890" y="203" fill="#946028" font-size="24" font-weight="700">进口 M</text><text x="890" y="247" fill="#836341" font-size="19">核电受限、替代燃料增加</text><text x="890" y="287" fill="#836341" font-size="18">LNG 数量及价格变动</text><text x="890" y="327" fill="#9c7a55" font-size="16">进口获得了实际能源</text></g>
+<rect x="283" y="392" width="637" height="95" rx="21" fill="#223f5e"/><text x="601" y="428" text-anchor="middle" font-size="28" font-weight="bold" font-family="sans-serif" fill="#f7fbff">TB = X − M</text><text x="601" y="464" text-anchor="middle" font-size="16" font-family="sans-serif" fill="#c5dcf1">它是核算指标，不是因果损失公式</text>
+<path d="M311 355 V389 M890 355 V389" stroke="#829aaf" stroke-width="3"/><path d="M595 486 V515" stroke="#829aaf" stroke-width="3"/>
+<text x="600" y="547" text-anchor="middle" font-size="16" font-family="sans-serif" fill="#4d657b">2011 年全年 BOP 贸易差额约 −1.6 万亿日元：不能与书中月差值“损失 1.6 万亿”混为一谈</text>
+<text x="1133" y="586" text-anchor="end" font-size="13" font-family="sans-serif" fill="#788b9d">来源：BOJ 2012 国际收支回顾 · EIA 2013 天然气进口</text>
+</svg>
