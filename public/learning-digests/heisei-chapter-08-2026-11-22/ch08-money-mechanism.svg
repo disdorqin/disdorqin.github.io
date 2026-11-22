@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="基础货币增长和M2存量变化不是固定乘数关系：央行购买国债、金融机构准备金上升，信贷和存款还取决于借款需求与银行约束">
+<rect width="1200" height="600" rx="26" fill="#f6f9fc"/><text x="53" y="69" font-family="sans-serif" font-size="30" font-weight="bold" fill="#1c3048">央行增加准备金，为什么不等于居民存款成倍增加？</text><text x="56" y="106" font-family="sans-serif" font-size="17" fill="#60758b">基础货币 B 与货币存量 M2 是不同的统计对象；观察比例不是政策的机械常数</text>
+<g font-family="sans-serif"><rect x="57" y="163" width="317" height="209" rx="22" fill="#e7effb" stroke="#93b7db" stroke-width="2"/><text x="84" y="213" font-size="23" font-weight="bold" fill="#285b87">央行：购买国债</text><text x="84" y="264" font-size="20" fill="#34566f">金融机构准备金增加</text><text x="84" y="312" font-size="16" fill="#65809a">基础货币 B 上升</text>
+<rect x="443" y="163" width="317" height="209" rx="22" fill="#eaf5ee" stroke="#8cc7a5" stroke-width="2"/><text x="470" y="213" font-size="23" font-weight="bold" fill="#307b56">银行与企业：作决定</text><text x="470" y="264" font-size="18" fill="#3e6650">贷款需求 · 风险评估</text><text x="470" y="305" font-size="18" fill="#3e6650">资本约束 · 资产配置</text>
+<rect x="828" y="163" width="317" height="209" rx="22" fill="#fff0e2" stroke="#d8ac7b" stroke-width="2"/><text x="855" y="213" font-size="23" font-weight="bold" fill="#90602c">家庭与企业：货币存量</text><text x="855" y="264" font-size="18" fill="#866845">M2 包括一定范围存款</text><text x="855" y="305" font-size="18" fill="#866845">并非按 B 的固定倍数增长</text></g>
+<path d="M380 264 H435 M764 264 H819" stroke="#8ba0b6" stroke-width="4" stroke-linecap="round"/><g fill="#8ba0b6"><path d="M432 255 l12 9 -12 9z"/><path d="M816 255 l12 9 -12 9z"/></g>
+<rect x="57" y="416" width="1088" height="113" rx="18" fill="#233e5a"/>
+<text x="81" y="455" font-family="sans-serif" font-size="22" font-weight="bold" fill="#ecf5ff">不能从“B 增长很快，M2 增长较慢”推导“政策零效果”。</text>
+<text x="81" y="487" font-family="sans-serif" font-size="17" fill="#c2d9ed">需另外检验利率、汇率、价格预期、借贷成本、就业和实际产出，以及没有政策时的反事实。</text>
+<text x="1137" y="572" text-anchor="end" font-family="sans-serif" font-size="13" fill="#768ca5">原创机制示意｜参考日本银行货币基数及 M2 官方统计</text></svg>

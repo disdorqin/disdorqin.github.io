@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="货币政策评价分四层：政策工具、金融传导、宏观结果、退出风险，标注2019作者观点、2024实际决策和2025反事实估计属于不同证据类型">
+<rect width="1200" height="600" rx="26" fill="#f8fafc"/><text x="55" y="69" font-family="sans-serif" font-size="30" font-weight="bold" fill="#1e3047">判断政策成败：至少需要四层证据</text><text x="57" y="106" font-family="sans-serif" font-size="17" fill="#687b8f">不要用“多印了钱”证明增长，也不要用“实际工资没涨”证明没有任何边际效果</text>
+<g font-family="sans-serif">
+<rect x="55" y="170" width="261" height="233" rx="21" fill="#e2effc" stroke="#83b6df" stroke-width="2"/><text x="76" y="210" font-size="22" font-weight="bold" fill="#2c608b">01 政策工具</text><text x="76" y="256" font-size="18" fill="#385d79">国债购买规模</text><text x="76" y="295" font-size="18" fill="#385d79">准备金利率</text><text x="76" y="334" font-size="18" fill="#385d79">基础货币变化</text>
+<rect x="329" y="170" width="261" height="233" rx="21" fill="#e7f5ec" stroke="#89bda0" stroke-width="2"/><text x="350" y="210" font-size="22" font-weight="bold" fill="#387750">02 金融传导</text><text x="350" y="256" font-size="18" fill="#456c53">M2、信贷需求</text><text x="350" y="295" font-size="18" fill="#456c53">利率与汇率预期</text><text x="350" y="334" font-size="18" fill="#456c53">企业融资条件</text>
+<rect x="603" y="170" width="261" height="233" rx="21" fill="#fff1df" stroke="#d7ad77" stroke-width="2"/><text x="624" y="210" font-size="22" font-weight="bold" fill="#90632f">03 宏观结果</text><text x="624" y="256" font-size="18" fill="#846945">GDP、CPI、工资</text><text x="624" y="295" font-size="18" fill="#846945">就业和居民消费</text><text x="624" y="334" font-size="18" fill="#846945">需要反事实比较</text>
+<rect x="877" y="170" width="267" height="233" rx="21" fill="#f3eaf6" stroke="#b69bc9" stroke-width="2"/><text x="899" y="210" font-size="22" font-weight="bold" fill="#7e528d">04 长期退出风险</text><text x="899" y="256" font-size="18" fill="#775b83">央行资产与利息</text><text x="899" y="295" font-size="18" fill="#775b83">国债再融资成本</text><text x="899" y="334" font-size="18" fill="#775b83">观察与情景需区分</text>
+</g>
+<g fill="#8aa0b4"><path d="M317 282 l12 9 -12 9z"/><path d="M591 282 l12 9 -12 9z"/><path d="M865 282 l12 9 -12 9z"/></g>
+<rect x="57" y="447" width="1087" height="94" rx="17" fill="#243d5a"/>
+<text x="79" y="482" font-family="sans-serif" font-size="19" fill="#e9f3ff" font-weight="bold">区分：2019 作者判断 ≠ 2024 实际政策决定 ≠ 2025 模型反事实估计</text>
+<text x="79" y="513" font-family="sans-serif" font-size="16" fill="#c6daec">每一层都要注明数据所属时期、来源和能够支持的因果结论范围。</text>
+<text x="1133" y="581" text-anchor="end" font-family="sans-serif" font-size="13" fill="#73889e">原创证据框架｜日本银行、IMF、RIETI 资料</text></svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="日本2013年量化质化宽松、2016年负利率和收益率曲线控制、2024年3月19日修改框架三大官方货币政策节点">
+<rect width="1200" height="600" rx="26" fill="#102137"/>
+<text x="52" y="70" font-family="sans-serif" font-size="30" font-weight="bold" fill="#f7faff">作者在2018年前担忧退出；2024年政策框架实际改变</text>
+<text x="55" y="110" font-family="sans-serif" font-size="17" fill="#b9cee2">不同知识时点要分开：当时承诺 → 后续新工具 → 后来的真实退出动作</text>
+<path d="M144 287 H1060" stroke="#7188a2" stroke-width="7" stroke-linecap="round"/>
+<g font-family="sans-serif" text-anchor="middle">
+<circle cx="199" cy="287" r="16" fill="#82ccf0"/><text x="199" y="255" fill="#e0f7ff" font-size="26" font-weight="bold">2013</text><rect x="83" y="327" width="232" height="152" rx="18" fill="#23496b" stroke="#508ab5"/><text x="199" y="366" fill="#ebf8ff" font-size="20" font-weight="bold">4 月 QQE</text><text x="199" y="401" fill="#c5e4fa" font-size="17">扩大国债购买</text><text x="199" y="435" fill="#c5e4fa" font-size="17">2% 通胀目标</text>
+<circle cx="598" cy="287" r="16" fill="#f3be78"/><text x="598" y="255" fill="#ffecd2" font-size="26" font-weight="bold">2016</text><rect x="483" y="136" width="232" height="119" rx="18" fill="#5b452e" stroke="#a98049"/><text x="599" y="174" fill="#fff1de" font-size="20" font-weight="bold">负利率 -0.1%</text><text x="599" y="208" fill="#f9dfbf" font-size="17">9 月引入 YCC</text><text x="599" y="236" fill="#f9dfbf" font-size="14">分层准备金安排</text>
+<circle cx="989" cy="287" r="16" fill="#a2dfae"/><text x="989" y="255" fill="#e4ffe6" font-size="26" font-weight="bold">2024</text><rect x="873" y="327" width="231" height="152" rx="18" fill="#30533e" stroke="#81b98f"/><text x="989" y="365" fill="#efffef" font-size="19" font-weight="bold">3 月 19 日</text><text x="989" y="401" fill="#c9efd0" font-size="17">结束负利率、YCC</text><text x="989" y="435" fill="#c9efd0" font-size="17">转向短期利率工具</text>
+</g>
+<g stroke="#7790aa" stroke-width="2"><line x1="199" y1="302" x2="199" y2="325"/><line x1="598" y1="272" x2="598" y2="255"/><line x1="989" y1="302" x2="989" y2="325"/></g>
+<rect x="54" y="511" width="1092" height="57" rx="13" fill="#1d344c"/><text x="79" y="544" font-family="sans-serif" font-size="17" fill="#d7e7f5">事实：框架已改变。不能由此推断所有长期财政风险消失，也不能再说“永远无法退出”。</text>
+<text x="1133" y="586" font-family="sans-serif" font-size="12" fill="#7992ab" text-anchor="end">来源：日本银行 2013、2016、2024 正式政策记录</text></svg>
