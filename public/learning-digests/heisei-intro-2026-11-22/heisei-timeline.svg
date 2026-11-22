@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="平成经济史关键节点时间轴，标示年表而非统计量">
+<rect width="1200" height="500" rx="28" fill="#101a2b"/>
+<text x="56" y="72" font-family="sans-serif" font-size="32" font-weight="bold" fill="#f5f7fb">从泡沫形成到长期调整：不是一次性危机</text>
+<text x="57" y="110" font-family="sans-serif" font-size="16" fill="#b7c6d8">1985—2019｜关键历史节点，仅表事件先后，不表示因果强度</text>
+<path d="M100 240 H1100" fill="none" stroke="#526885" stroke-width="6" stroke-linecap="round"/>
+<g font-family="sans-serif" font-size="18" text-anchor="middle"><circle cx="125" cy="240" r="13" fill="#72c5e8"/><text x="125" y="195" fill="#f4f6fb" font-weight="bold">1985</text><text x="125" y="280" fill="#b7c6d8">广场协议</text><text x="125" y="305" fill="#b7c6d8">与日元调整</text>
+<circle cx="330" cy="240" r="15" fill="#f0b35b"/><text x="330" y="195" fill="#f4f6fb" font-weight="bold">1989</text><text x="330" y="280" fill="#b7c6d8">股票市场</text><text x="330" y="305" fill="#b7c6d8">年末见顶</text>
+<circle cx="535" cy="240" r="15" fill="#ec7878"/><text x="535" y="195" fill="#f4f6fb" font-weight="bold">1991</text><text x="535" y="280" fill="#b7c6d8">全国地价</text><text x="535" y="305" fill="#b7c6d8">指标见顶</text>
+<circle cx="740" cy="240" r="15" fill="#ec7878"/><text x="740" y="195" fill="#f4f6fb" font-weight="bold">1997–98</text><text x="740" y="280" fill="#b7c6d8">金融危机与</text><text x="740" y="305" fill="#b7c6d8">银行体系冲击</text>
+<circle cx="950" cy="240" r="15" fill="#8bca9c"/><text x="950" y="195" fill="#f4f6fb" font-weight="bold">2013</text><text x="950" y="280" fill="#b7c6d8">安倍经济学</text><text x="950" y="305" fill="#b7c6d8">政策组合</text></g>
+<rect x="56" y="370" width="1088" height="78" rx="16" fill="#1b2b43"/>
+<text x="84" y="402" font-family="sans-serif" font-size="18" font-weight="bold" fill="#dce9f9">时间线的教训</text><text x="84" y="428" font-family="sans-serif" font-size="17" fill="#d2dee9">资产价格、银行资产负债表、企业投资、劳动市场与政策信心，并不会同步调整。</text>
+<text x="1135" y="483" font-family="sans-serif" font-size="12" fill="#8ea4bb" text-anchor="end">原创示意｜参考 BOJ 2009、2025 与出版社公开目录</text>
+</svg>

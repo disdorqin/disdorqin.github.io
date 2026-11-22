@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="日本1990、1995、2000、2002、2008、2019年完全失业率折线图，依日本总务省统计局年鉴">
+<rect width="1200" height="500" rx="28" fill="#fcfcfd"/>
+<text x="60" y="65" font-family="sans-serif" font-size="29" font-weight="bold" fill="#25334e">一个宏观冲击，如何延伸到招聘与职业起点？</text>
+<text x="60" y="100" font-family="sans-serif" font-size="16" fill="#65748b">日本完全失业率｜年度平均值（%）｜仅抽取6个年份；不是青年失业率</text>
+<g stroke="#dfe5ef" stroke-width="1"><line x1="122" y1="150" x2="1105" y2="150"/><line x1="122" y1="220" x2="1105" y2="220"/><line x1="122" y1="290" x2="1105" y2="290"/><line x1="122" y1="360" x2="1105" y2="360"/></g>
+<g font-family="sans-serif" font-size="15" fill="#7d8799" text-anchor="end"><text x="110" y="155">6.0</text><text x="110" y="225">4.0</text><text x="110" y="295">2.0</text><text x="110" y="365">0.0</text></g>
+<polyline points="180,286.5 360,248 540,195.5 620,171 840,220 1055,276" fill="none" stroke="#2563a5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<g fill="#fff" stroke="#2563a5" stroke-width="4"><circle cx="180" cy="286.5" r="8"/><circle cx="360" cy="248" r="8"/><circle cx="540" cy="195.5" r="8"/><circle cx="620" cy="171" r="9"/><circle cx="840" cy="220" r="8"/><circle cx="1055" cy="276" r="8"/></g>
+<g font-family="sans-serif" font-size="18" fill="#25334e" text-anchor="middle" font-weight="bold"><text x="180" y="265">2.1%</text><text x="360" y="226">3.2%</text><text x="540" y="172">4.7%</text><text x="620" y="148">5.4%</text><text x="840" y="198">4.0%</text><text x="1055" y="254">2.4%</text></g>
+<g font-family="sans-serif" font-size="16" fill="#576477" text-anchor="middle"><text x="180" y="390">1990</text><text x="360" y="390">1995</text><text x="540" y="390">2000</text><text x="620" y="415">2002</text><text x="840" y="390">2008</text><text x="1055" y="390">2019</text></g>
+<rect x="60" y="431" width="1080" height="36" rx="10" fill="#eef4fa"/><text x="75" y="455" font-family="sans-serif" font-size="14" fill="#435978">来源：日本总务省统计局《第70回日本统计年鉴》19-1；年份为选点，线段用于引导阅读而非插值数据。</text>
+</svg>
