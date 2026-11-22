@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 610" role="img" aria-label="日本泡沫转折的多层时间线：市场、企业投资、银行信贷分别变化，不能直接推论单一因果">
+<rect width="1200" height="610" rx="24" fill="#102136"/>
+<text x="58" y="75" font-family="sans-serif" font-size="31" font-weight="700" fill="#f7fbff">泡沫不是同一天进入所有人的生活</text>
+<text x="60" y="113" font-family="sans-serif" font-size="16" fill="#b9cce2">三个观察层次：市场价格 → 实体经济 → 银行信贷（示意，不是单因果证明）</text>
+<g font-family="sans-serif" font-size="17" fill="#d0e2f5"><text x="230" y="168">1989</text><text x="472" y="168">1991</text><text x="713" y="168">1994</text><text x="954" y="168">1997–98</text></g>
+<line x1="254" y1="180" x2="1050" y2="180" stroke="#57708d" stroke-width="3"/>
+<g stroke="#456582" stroke-dasharray="4 7" stroke-width="1"><line x1="252" y1="184" x2="252" y2="485"/><line x1="493" y1="184" x2="493" y2="485"/><line x1="734" y1="184" x2="734" y2="485"/><line x1="980" y1="184" x2="980" y2="485"/></g>
+<g font-family="sans-serif" font-weight="600" font-size="19"><text x="61" y="267" fill="#81c8f0">资产市场</text><text x="61" y="361" fill="#f6c17b">企业与投资</text><text x="61" y="454" fill="#a9e4c1">银行与融资</text></g>
+<rect x="236" y="223" width="230" height="70" rx="15" fill="#25476b" stroke="#76c5ed"/>
+<text x="252" y="249" font-family="sans-serif" font-size="18" fill="#f8fcff" font-weight="bold">1989 年末股市见顶</text><text x="252" y="273" font-family="sans-serif" font-size="15" fill="#d4e7f7">价格先释放警告信号</text>
+<rect x="477" y="317" width="246" height="70" rx="15" fill="#60472c" stroke="#ecc38b"/>
+<text x="494" y="343" font-family="sans-serif" font-size="18" fill="#fff1dc" font-weight="bold">1991 年投资转弱</text><text x="494" y="367" font-family="sans-serif" font-size="15" fill="#f9dfb7">经营数据逐渐显示压力</text>
+<rect x="735" y="317" width="211" height="70" rx="15" fill="#60472c" stroke="#ecc38b"/>
+<text x="750" y="343" font-family="sans-serif" font-size="18" fill="#fff1dc" font-weight="bold">1992–94 年</text><text x="750" y="367" font-family="sans-serif" font-size="15" fill="#f9dfb7">企业融资需求较弱</text>
+<rect x="917" y="409" width="229" height="70" rx="15" fill="#28544b" stroke="#8ddaba"/>
+<text x="934" y="434" font-family="sans-serif" font-size="18" fill="#effff8" font-weight="bold">1997–98 年</text><text x="934" y="458" font-family="sans-serif" font-size="15" fill="#d0f2e4">信贷紧缩证据明显</text>
+<path d="M 462 257 L 493 257 L 493 310" fill="none" stroke="#a2b9cf" stroke-width="2.5" stroke-dasharray="5 5"/>
+<polygon points="493,315 486,302 500,302" fill="#a2b9cf"/>
+<rect x="58" y="513" width="1085" height="63" rx="14" fill="#1b3550"/>
+<text x="78" y="540" font-family="sans-serif" font-size="18" fill="#dff1ff" font-weight="bold">不要把一条时间线画成一条因果箭头</text>
+<text x="78" y="561" font-family="sans-serif" font-size="14" fill="#adc7df">年份节点来自原著、第 1 章；日本内阁府《2001 年经济财政白皮书》用于区分企业融资需求与银行供给的阶段。</text>
+</svg>

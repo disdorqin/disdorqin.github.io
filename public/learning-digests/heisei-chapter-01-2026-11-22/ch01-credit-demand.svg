@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="1992至1994年日本投资需求不足与1997至1998年信贷紧缩的两种不同机制示意图">
+<rect width="1200" height="630" rx="24" fill="#f7f9fc"/>
+<text x="52" y="73" font-family="sans-serif" font-size="30" font-weight="bold" fill="#192d46">投资都在下降，但原因可能完全不同</text>
+<text x="54" y="108" font-family="sans-serif" font-size="16" fill="#5a6b82">核心问题：企业「不想借」还是银行「不愿贷」？</text>
+<rect x="54" y="144" width="525" height="382" rx="21" fill="#eaf3fb" stroke="#87b6df" stroke-width="2"/>
+<rect x="620" y="144" width="525" height="382" rx="21" fill="#e9f6f1" stroke="#8ec5b2" stroke-width="2"/>
+<text x="80" y="190" font-family="sans-serif" font-size="24" font-weight="700" fill="#23598a">1992–1994：融资需求偏弱</text>
+<text x="646" y="190" font-family="sans-serif" font-size="24" font-weight="700" fill="#236b57">1997–1998：融资供给受限</text>
+<g font-family="sans-serif" font-size="20" text-anchor="middle">
+<rect x="101" y="225" width="430" height="70" rx="14" fill="#fff" stroke="#b4d0e8"/><text x="315" y="255" fill="#25445f">产品需求与投资回报预期走低</text><text x="315" y="280" fill="#667f99" font-size="15">企业觉得扩建不划算</text>
+<rect x="101" y="352" width="430" height="70" rx="14" fill="#fff" stroke="#b4d0e8"/><text x="315" y="382" fill="#25445f">企业主动减少设备投资与借款</text><text x="315" y="407" fill="#667f99" font-size="15">仅降息未必恢复有效投资</text>
+<rect x="668" y="225" width="430" height="70" rx="14" fill="#fff" stroke="#b3d9cb"/><text x="883" y="255" fill="#264f43">银行坏账、资本与风险承受力恶化</text><text x="883" y="280" fill="#5e8a7b" font-size="15">放贷审核和信用供应趋紧</text>
+<rect x="668" y="352" width="430" height="70" rx="14" fill="#fff" stroke="#b3d9cb"/><text x="883" y="382" fill="#264f43">部分中小企业融资受阻、投资减少</text><text x="883" y="407" fill="#5e8a7b" font-size="15">修复银行资本和坏账处置更重要</text>
+</g>
+<path d="M315 299 V346" stroke="#3a7db4" stroke-width="4" stroke-linecap="round"/><polygon points="306,340 315,354 324,340" fill="#3a7db4"/>
+<path d="M883 299 V346" stroke="#3c8a72" stroke-width="4" stroke-linecap="round"/><polygon points="874,340 883,354 892,340" fill="#3c8a72"/>
+<text x="315" y="473" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#2d6695">需求端机制：要问有没有好项目</text>
+<text x="883" y="473" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#2f785e">供给端机制：要问好项目能否融资</text>
+<text x="56" y="571" font-family="sans-serif" font-size="17" font-weight="bold" fill="#192d46">作者立场偏向实体投资需求；内阁府 2001 年报告将两个阶段明确区分。</text>
+<text x="56" y="598" font-family="sans-serif" font-size="14" fill="#62748b">资料：野口 2019 年第 1 章，日本内阁府 2001 年白皮书 §2，IMF 1999 WP/99/003。示意图不等于因果估计。</text>
+</svg>
