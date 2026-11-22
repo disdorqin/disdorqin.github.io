@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-label="帮助青年把技术变革映射到个人职业选择的三层能力结构和四项风险核查问题">
+<rect width="1200" height="620" rx="26" fill="#f7f9fc"/>
+<text x="54" y="67" fill="#1c3048" font-family="sans-serif" font-size="30" font-weight="bold">行业会变：哪些能力仍然能够迁移？</text><text x="56" y="106" fill="#62748a" font-family="sans-serif" font-size="17">不预测哪一个岗位永远安全，而是拆解能力和真实价值</text>
+<g font-family="sans-serif">
+<rect x="72" y="166" width="306" height="265" rx="19" fill="#e3ecfa" stroke="#8cb2da" stroke-width="2"/>
+<rect x="446" y="166" width="306" height="265" rx="19" fill="#e7f4ed" stroke="#8fc7a6" stroke-width="2"/>
+<rect x="820" y="166" width="306" height="265" rx="19" fill="#faefdf" stroke="#dbb68a" stroke-width="2"/>
+<text x="100" y="211" font-size="22" font-weight="bold" fill="#315a86">层 1：具体工具</text><text x="474" y="211" font-size="22" font-weight="bold" fill="#347351">层 2：可迁移原理</text><text x="848" y="211" font-size="22" font-weight="bold" fill="#94642c">层 3：真实价值</text>
+<g font-size="19" fill="#354d65"><text x="100" y="260">框架、语言与平台</text><text x="100" y="301">软件版本和工作流</text><text x="100" y="342">特定 API 与模型</text><text x="100" y="384">更容易随着标准变化</text>
+<text x="474" y="260">算法、统计与系统设计</text><text x="474" y="301">验证、抽象与沟通</text><text x="474" y="342">跨项目协作能力</text><text x="474" y="384">需要持续深化和实践</text>
+<text x="848" y="260">客户为什么需要？</text><text x="848" y="301">解决哪个关键约束？</text><text x="848" y="342">怎样证明实际效果？</text><text x="848" y="384">是否创造持续的价值？</text></g>
+</g>
+<path d="M384 295 H436 M758 295 H811" fill="none" stroke="#8299ad" stroke-width="4"/><g fill="#8299ad"><path d="M433 286 l13 9 -13 9z"/><path d="M808 286 l13 9 -13 9z"/></g>
+<rect x="74" y="469" width="1052" height="88" rx="17" fill="#233e5b"/>
+<text x="104" y="505" fill="#eff8ff" font-family="sans-serif" font-size="19" font-weight="bold">每次选项目、读研或跳槽，检查四件事：</text><text x="104" y="538" fill="#cbdfef" font-family="sans-serif" font-size="16">新标准如何变化？｜岗位是否易替代？｜能沉淀什么证据？｜失败后还能去哪里？</text>
+<text x="1121" y="597" text-anchor="end" fill="#718398" font-family="sans-serif" font-size="13">原创分析示意｜受原著第二章的产业组织转型问题启发</text></svg>

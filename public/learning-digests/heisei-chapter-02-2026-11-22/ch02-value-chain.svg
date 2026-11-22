@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 590" role="img" aria-label="比较垂直一体化生产和水平分工协作的组织结构，强调标准接口和高价值环节而非单纯外包">
+<rect width="1200" height="590" rx="26" fill="#f6f8fb"/><text x="54" y="66" fill="#1e3048" font-family="sans-serif" font-size="31" font-weight="700">生产能力没有消失，改变的是企业的边界</text><text x="57" y="104" fill="#617289" font-family="sans-serif" font-size="17">同一产品链：垂直整合 vs. 跨企业分工｜组织结构示意，不代表优劣排名</text>
+<rect x="55" y="139" width="506" height="388" rx="24" fill="#e4effa" stroke="#78aedd" stroke-width="2"/>
+<rect x="633" y="139" width="512" height="388" rx="24" fill="#e9f3ec" stroke="#91c59d" stroke-width="2"/>
+<text x="86" y="184" fill="#265882" font-family="sans-serif" font-size="23" font-weight="700">纵向整合｜企业内协调</text><text x="665" y="184" fill="#28684c" font-family="sans-serif" font-size="23" font-weight="700">水平分工｜跨企业协调</text>
+<rect x="195" y="215" width="220" height="279" rx="17" fill="#2d5884"/><text x="305" y="249" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="19" font-weight="700">公司 A 内部</text>
+<g fill="#e8f4ff" font-family="sans-serif" font-size="18" text-anchor="middle"><text x="305" y="285">需求与设计</text><text x="305" y="331">部件和制造</text><text x="305" y="377">装配与测试</text><text x="305" y="423">品牌与销售</text><text x="305" y="465">全部在内部协调</text></g>
+<g stroke="#9bc7e6" stroke-width="2"><line x1="235" y1="298" x2="376" y2="298"/><line x1="235" y1="344" x2="376" y2="344"/><line x1="235" y1="390" x2="376" y2="390"/></g>
+<g font-family="sans-serif" font-size="17" font-weight="600" text-anchor="middle"><rect x="669" y="228" width="198" height="73" rx="12" fill="#2e755c"/><text x="768" y="269" fill="#fff">公司 A｜产品设计</text>
+<rect x="904" y="228" width="199" height="73" rx="12" fill="#3f8d70"/><text x="1003" y="269" fill="#fff">公司 B｜芯片软件</text>
+<rect x="669" y="336" width="198" height="73" rx="12" fill="#428869"/><text x="768" y="378" fill="#fff">公司 C｜专业制造</text>
+<rect x="904" y="336" width="199" height="73" rx="12" fill="#4c9075"/><text x="1003" y="378" fill="#fff">公司 D｜交付服务</text></g>
+<g stroke="#2f7c60" stroke-width="3" fill="none" stroke-linecap="round"><path d="M867 265 H899"/><path d="M767 301 V332"/><path d="M1002 301 V332"/><path d="M867 373 H899"/></g>
+<text x="886" y="459" fill="#32694d" font-family="sans-serif" font-size="16" text-anchor="middle">标准、合同、网络与系统集成</text>
+<text x="60" y="561" fill="#63758a" font-family="sans-serif" font-size="14">原创示意｜参照野口悠纪雄《失去的三十年》第二章对个人电脑与全球制造的讨论；未把“外包”视为必然更优。</text>
+</svg>

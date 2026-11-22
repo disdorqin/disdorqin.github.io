@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-label="1980年中国经济特区设立、1992年康柏冲击、1995年Windows 95日文版发布、1996年雅虎日本上线、2001年中国加入WTO等历史节点">
+<rect width="1200" height="620" rx="26" fill="#122337"/>
+<text x="54" y="68" fill="#f1f7ff" font-family="sans-serif" font-size="30" font-weight="700">不是一场单独的冲击，而是多股变化相遇</text><text x="56" y="110" fill="#b3c8df" font-family="sans-serif" font-size="17">将原著叙述拆成可核查的历史事件：政策、标准、技术与贸易开放</text>
+<path d="M110 307 H1100" stroke="#62809f" stroke-width="7" stroke-linecap="round"/>
+<g font-family="sans-serif" text-anchor="middle">
+<circle cx="135" cy="307" r="14" fill="#87d0e9"/><text x="135" y="279" fill="#c8ebff" font-size="21" font-weight="bold">1980</text>
+<rect x="55" y="352" width="170" height="98" rx="14" fill="#244361"/><text x="140" y="390" fill="#e2f1ff" font-size="17">四个经济特区</text><text x="140" y="419" fill="#e2f1ff" font-size="17">正式获批</text>
+<circle cx="340" cy="307" r="14" fill="#edae72"/><text x="340" y="279" fill="#ffd9b4" font-size="21" font-weight="bold">1992</text>
+<rect x="257" y="155" width="167" height="98" rx="14" fill="#63472e"/><text x="340" y="194" fill="#ffe8d2" font-size="17">康柏冲击</text><text x="340" y="221" fill="#ffe8d2" font-size="17">PC 价格竞争</text>
+<circle cx="545" cy="307" r="14" fill="#9bd8a9"/><text x="545" y="279" fill="#cbf1d3" font-size="21" font-weight="bold">1995</text>
+<rect x="460" y="352" width="171" height="99" rx="14" fill="#29563c"/><text x="545" y="390" fill="#ddffe8" font-size="16">Windows 95</text><text x="545" y="418" fill="#ddffe8" font-size="16">日文版上市</text>
+<circle cx="751" cy="307" r="14" fill="#b1a4ef"/><text x="751" y="279" fill="#e4deff" font-size="21" font-weight="bold">1996</text>
+<rect x="666" y="155" width="171" height="98" rx="14" fill="#4d426c"/><text x="751" y="194" fill="#ede6ff" font-size="17">雅虎日本</text><text x="751" y="222" fill="#ede6ff" font-size="17">门户上线</text>
+<circle cx="974" cy="307" r="14" fill="#e0ca7a"/><text x="974" y="279" fill="#fff2b8" font-size="21" font-weight="bold">2001</text>
+<rect x="889" y="352" width="171" height="98" rx="14" fill="#625523"/><text x="974" y="390" fill="#fff3d0" font-size="17">中国加入 WTO</text><text x="974" y="420" fill="#fff3d0" font-size="17">12 月 11 日</text>
+</g><g stroke="#718da8" stroke-width="2"><line x1="135" y1="327" x2="135" y2="350"/><line x1="340" y1="285" x2="340" y2="251"/><line x1="545" y1="327" x2="545" y2="350"/><line x1="751" y1="285" x2="751" y2="251"/><line x1="974" y1="327" x2="974" y2="350"/></g>
+<rect x="54" y="496" width="1092" height="79" rx="15" fill="#1e354d"/>
+<text x="79" y="527" fill="#f1f5fc" font-family="sans-serif" font-size="19" font-weight="bold">不要把技术发布、开放政策和经济后果写成同一年发生的事。</text><text x="79" y="555" fill="#bcd0e3" font-family="sans-serif" font-size="14">核对：国务院/全国人大历史记录、NEC 历史、PC Watch、雅虎日本官方年表、WTO 官方成员日期。</text>
+</svg>
