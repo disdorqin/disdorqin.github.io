@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 610" role="img" aria-label="美联储QE1与QE2的资产购买规模和时间顺序：QE1机构住房抵押证券1.25万亿美元、机构债0.175万亿、长期国债0.300万亿；QE2额外长期国债0.600万亿，2010年11月至2011年6月。">
+<rect width="1200" height="610" rx="28" fill="#122136"/><text x="54" y="72" font-family="sans-serif" font-size="30" font-weight="bold" fill="#f4f8ff">QE1 / QE2：同叫量化宽松，购买对象并不相同</text>
+<text x="56" y="110" font-family="sans-serif" font-size="16" fill="#b7cce0">美元单位：万亿美元｜历史实际资产购买规模，不等于财政损失</text>
+<rect x="55" y="149" width="521" height="368" rx="22" fill="#233d5c" stroke="#74acd8" stroke-width="2"/>
+<rect x="623" y="149" width="522" height="368" rx="22" fill="#295145" stroke="#83c0a8" stroke-width="2"/>
+<g font-family="sans-serif">
+<text x="79" y="194" fill="#a7d5fd" font-size="25" font-weight="bold">QE1｜2008.11—2010.03</text>
+<text x="648" y="194" fill="#aeefd5" font-size="25" font-weight="bold">QE2｜2010.11—2011.06</text>
+<rect x="88" y="224" width="357" height="60" rx="9" fill="#548ac2"/><text x="106" y="262" fill="#ffffff" font-size="19">机构 MBS：1.250</text>
+<rect x="88" y="305" width="144" height="50" rx="9" fill="#78abd9"/><text x="107" y="337" fill="#143d60" font-size="16">机构债 0.175</text>
+<rect x="250" y="305" width="190" height="50" rx="9" fill="#96bedf"/><text x="268" y="337" fill="#153e62" font-size="16">国债 0.300</text>
+<text x="88" y="413" fill="#d8e9f8" font-size="18">三类资产合计约 1.725 万亿美元</text>
+<rect x="659" y="231" width="360" height="69" rx="10" fill="#4b9e7b"/><text x="678" y="275" fill="#ffffff" font-size="23" font-weight="bold">长期国债 0.600</text>
+<text x="659" y="351" fill="#d8f5e8" font-size="18">约每月购买 750 亿美元</text>
+<text x="659" y="395" fill="#d8f5e8" font-size="18">目标：降低长期融资成本</text>
+<text x="659" y="426" fill="#d8f5e8" font-size="18">支持复苏与价格稳定</text></g>
+<rect x="55" y="535" width="1090" height="49" rx="13" fill="#20364e"/><text x="78" y="565" font-family="sans-serif" font-size="17" font-weight="bold" fill="#ecf5ff">央行购买资产 ≠ 等额直接给家庭现金，更不意味着资产价格只会上涨。</text>
+<text x="1138" y="603" text-anchor="end" fill="#7b94ad" font-family="sans-serif" font-size="12">来源：纽约联储 Large-Scale Asset Purchases 档案、美联储货币政策时间轴</text>
+</svg>
