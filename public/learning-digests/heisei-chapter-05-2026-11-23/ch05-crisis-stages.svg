@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="美国金融危机2007年市场压力到2009年就业恶化的时间轴。2007年8月巴黎银行冻结基金、12月衰退开始；2008年3月贝尔斯登、9月雷曼和AIG；2009年6月衰退结束、10月失业率达到约百分之十。">
+<rect width="1200" height="650" rx="28" fill="#102139"/>
+<text x="56" y="73" font-family="sans-serif" font-size="31" font-weight="bold" fill="#f3f8ff">雷曼破产不是危机开始，GDP 触底也不是就业修复</text>
+<text x="58" y="113" font-family="sans-serif" font-size="17" fill="#bed1e4">时间顺序：金融压力 → 系统失信 → 实体衰退 → 就业滞后</text>
+<path d="M90 323 H1110" fill="none" stroke="#687f99" stroke-width="7" stroke-linecap="round"/>
+<g font-family="sans-serif" text-anchor="middle">
+<circle cx="135" cy="323" r="13" fill="#94c5f4"/><text x="135" y="295" fill="#dcedff" font-size="20" font-weight="700">2007.08</text>
+<rect x="53" y="362" width="174" height="120" rx="14" fill="#294867"/>
+<text x="140" y="398" fill="#f0f7ff" font-size="18" font-weight="700">法国巴黎银行</text><text x="140" y="427" fill="#d1e9ff" font-size="16">三只基金冻结</text><text x="140" y="454" fill="#d1e9ff" font-size="15">市场压力显现</text>
+<circle cx="352" cy="323" r="13" fill="#eabf78"/><text x="352" y="295" fill="#ffebc8" font-size="20" font-weight="700">2007.12</text>
+<rect x="263" y="145" width="177" height="120" rx="14" fill="#615030"/><text x="352" y="182" fill="#fff6df" font-size="18" font-weight="700">美国衰退开始</text><text x="352" y="212" fill="#ffe0ad" font-size="16">NBER 事后认定</text><text x="352" y="238" fill="#ffe0ad" font-size="15">早于雷曼破产</text>
+<circle cx="565" cy="323" r="13" fill="#dcab7b"/><text x="565" y="295" fill="#ffe5cd" font-size="20" font-weight="700">2008.03</text>
+<rect x="476" y="362" width="177" height="120" rx="14" fill="#624832"/><text x="565" y="399" fill="#fff6e9" font-size="18" font-weight="700">贝尔斯登</text><text x="565" y="429" fill="#ffe5ca" font-size="16">救助及收购</text><text x="565" y="454" fill="#ffe5ca" font-size="15">融资危机升级</text>
+<circle cx="777" cy="323" r="13" fill="#ef979a"/><text x="777" y="295" fill="#ffd2d4" font-size="20" font-weight="700">2008.09</text>
+<rect x="689" y="145" width="178" height="120" rx="14" fill="#6b3d44"/><text x="778" y="182" fill="#fff3f3" font-size="18" font-weight="700">雷曼破产</text><text x="778" y="212" fill="#ffd8d8" font-size="16">AIG 获支持</text><text x="778" y="238" fill="#ffd8d8" font-size="15">系统性冲击</text>
+<circle cx="976" cy="323" r="13" fill="#82c4a9"/><text x="976" y="295" fill="#c7f7e2" font-size="20" font-weight="700">2009</text>
+<rect x="881" y="362" width="206" height="120" rx="14" fill="#275a4c"/><text x="985" y="398" fill="#effff7" font-size="17" font-weight="700">6 月衰退结束</text><text x="985" y="429" fill="#d4f5e6" font-size="17">10 月失业率</text><text x="985" y="455" fill="#d4f5e6" font-size="18" font-weight="700">约 10.0%</text>
+</g>
+<g stroke="#8a9fb4" stroke-width="2"><path d="M135 342V362"/><path d="M352 304V265"/><path d="M565 342V362"/><path d="M777 304V265"/><path d="M976 342V362"/></g>
+<rect x="56" y="519" width="1087" height="85" rx="15" fill="#20384f"/>
+<text x="80" y="552" font-family="sans-serif" font-size="20" font-weight="700" fill="#e8f5ff">金融市场恢复速度 ≠ 普通家庭就业与财富恢复速度</text>
+<text x="80" y="579" font-family="sans-serif" font-size="14" fill="#bdd0e4">来源：BIS（2007 银行压力事件）、NBER（2007.12—2009.06 经济周期）、BLS（2009.10 失业率）。</text>
+</svg>

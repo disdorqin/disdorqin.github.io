@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="住房净值和套现再融资示意。房价上涨可以增加抵押借款空间，但取得的现金是新增债务，不等于免费收入。">
+<rect width="1200" height="600" rx="28" fill="#f7f9fc"/>
+<text x="52" y="70" font-family="sans-serif" font-size="30" font-weight="700" fill="#1d3049">房价升值 ≠ 免费获得现金</text>
+<text x="53" y="108" font-family="sans-serif" font-size="17" fill="#61758b">金额为教学示意，不对应美国某个家庭的历史贷款数据｜单位：万元</text>
+<rect x="52" y="146" width="512" height="322" rx="22" fill="#e6f1fb" stroke="#8cbbe2" stroke-width="2"/>
+<rect x="637" y="146" width="512" height="322" rx="22" fill="#eaf3ec" stroke="#91c7a3" stroke-width="2"/>
+<g font-family="sans-serif">
+<text x="80" y="194" font-size="23" font-weight="700" fill="#285b89">起点：正常按揭</text>
+<text x="666" y="194" font-size="23" font-weight="700" fill="#2c7451">房价升值后的再融资</text>
+<rect x="97" y="231" width="412" height="51" rx="12" fill="#d0e5f9"/><text x="116" y="263" font-size="19" fill="#244c72">房屋市场价值 100</text>
+<rect x="97" y="291" width="247" height="52" rx="12" fill="#3b77b2"/><text x="116" y="325" font-size="19" fill="#ffffff">旧债务 60</text>
+<rect x="344" y="291" width="165" height="52" rx="12" fill="#8dc4e7"/><text x="364" y="325" font-size="19" fill="#143d60">净值 40</text>
+<text x="97" y="403" font-size="19" font-weight="700" fill="#295e88">净值 = 房价 − 未还债务</text>
+<rect x="682" y="231" width="412" height="51" rx="12" fill="#d5f0df"/><text x="700" y="263" font-size="19" fill="#236348">房屋市场价值 150</text>
+<rect x="682" y="291" width="247" height="52" rx="12" fill="#418f69"/><text x="700" y="325" font-size="19" fill="#ffffff">新债务 90</text>
+<rect x="929" y="291" width="165" height="52" rx="12" fill="#a6ddba"/><text x="951" y="325" font-size="19" fill="#185c3c">净值 60</text>
+<text x="682" y="403" font-size="18" font-weight="700" fill="#2a744e">新增借款 30，并不是收入</text>
+</g>
+<path d="M573 304 H621" stroke="#6d8aa8" stroke-width="5" fill="none" stroke-linecap="round"/><polygon points="615,293 633,304 615,315" fill="#6d8aa8"/>
+<rect x="53" y="493" width="1096" height="68" rx="15" fill="#243a53"/>
+<text x="79" y="520" font-family="sans-serif" font-size="20" font-weight="700" fill="#edf8ff">关键检验：如果估值下跌、收入减少，新债务仍须偿还。</text>
+<text x="79" y="546" font-family="sans-serif" font-size="15" fill="#c3d5e8">原创机制图；原理：住房净值与套现再融资，非历史统计和贷款建议。</text>
+</svg>

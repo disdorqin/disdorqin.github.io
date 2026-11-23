@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="全球经济危机的跨国传导机制。从美国住房杠杆与证券化危机，到资金市场压力、世界消费和贸易融资收缩，再到日本出口制造生产和招聘承压，箭头为需要分别核证的机制。">
+<rect width="1200" height="630" rx="28" fill="#f8fafc"/>
+<text x="55" y="72" font-family="sans-serif" font-size="29" font-weight="700" fill="#1a2e47">美国房市的风险，怎样越过太平洋？</text>
+<text x="57" y="110" font-family="sans-serif" font-size="16" fill="#61778c">跨国传导机制示意｜不表示每条箭头的因果份额已经获得精确估计</text>
+<g font-family="sans-serif">
+<rect x="56" y="164" width="248" height="292" rx="20" fill="#eaf1fb" stroke="#8badd5" stroke-width="2"/>
+<rect x="333" y="164" width="248" height="292" rx="20" fill="#fff0e4" stroke="#dfb68d" stroke-width="2"/>
+<rect x="610" y="164" width="248" height="292" rx="20" fill="#f3ebfa" stroke="#c1abd9" stroke-width="2"/>
+<rect x="887" y="164" width="257" height="292" rx="20" fill="#e7f4ec" stroke="#95c4a8" stroke-width="2"/>
+<text x="79" y="210" font-size="21" font-weight="700" fill="#2d567f">① 美国住房市场</text>
+<text x="356" y="210" font-size="21" font-weight="700" fill="#93603b">② 金融系统</text>
+<text x="633" y="210" font-size="21" font-weight="700" fill="#765a91">③ 世界总需求</text>
+<text x="910" y="210" font-size="21" font-weight="700" fill="#357450">④ 日本实体经济</text>
+<g font-size="18" fill="#385269">
+<text x="79" y="266">高住房估值</text><text x="79" y="310">高杠杆与再融资</text><text x="79" y="354">次贷违约风险</text><text x="79" y="398">依赖房价继续上涨</text>
+<text x="356" y="266">MBS / CDO 价值承压</text><text x="356" y="310">机构资本与信用受损</text><text x="356" y="354">短期市场融资收紧</text><text x="356" y="398">风险偏好下降</text>
+<text x="633" y="266">消费与投资减弱</text><text x="633" y="310">多国订单减少</text><text x="633" y="354">贸易融资变难</text><text x="633" y="398">库存与贸易收缩</text>
+<text x="910" y="266">出口订单下降</text><text x="910" y="310">制造业生产调整</text><text x="910" y="354">供应商传导</text><text x="910" y="398">企业招聘承压</text>
+</g></g>
+<g fill="#8d9eaf"><polygon points="307,294 324,306 307,318"/><polygon points="584,294 601,306 584,318"/><polygon points="861,294 878,306 861,318"/></g>
+<rect x="56" y="496" width="1088" height="82" rx="16" fill="#233c56"/>
+<text x="82" y="529" font-family="sans-serif" font-size="19" font-weight="700" fill="#f0f8ff">作者特别强调“住房套现 → 购车 → 日本汽车利润”，但美联储研究发现直接套现购车并不普遍。</text>
+<text x="82" y="557" font-family="sans-serif" font-size="15" fill="#c3d9ea">真正可靠的解释需要分别核对金融、贸易、汇率与产业结构渠道。来源：原著第五章、Fed、BOJ。</text>
+</svg>
