@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 670" role="img" aria-label="比较日本金融厅确定使用的10.4326万亿日元破产处置资金和作者假设计算的约38.8万亿日元税收减免，说明两者证据类型不同不能直接相加为财政实损">
+<rect width="1200" height="670" rx="28" fill="#f9fafc"/>
+<text x="56" y="72" fill="#263750" font-family="sans-serif" font-size="30" font-weight="bold">公共资金与税收假设，不能直接相加</text>
+<text x="56" y="110" fill="#63748b" font-family="sans-serif" font-size="17">本章数字审计｜单位统一：万亿日元（1 兆日元 = 1 万亿日元）</text>
+<rect x="57" y="154" width="519" height="348" rx="21" fill="#e6f1fb" stroke="#87b6de" stroke-width="2"/>
+<rect x="624" y="154" width="519" height="348" rx="21" fill="#fff0e8" stroke="#e1aa88" stroke-width="2" stroke-dasharray="8 5"/>
+<g font-family="sans-serif"><text x="83" y="199" font-size="22" font-weight="bold" fill="#31638b">A｜官方已确认的资金使用</text>
+<text x="83" y="291" font-size="62" font-weight="bold" fill="#1f4f7c">10.4326</text>
+<text x="83" y="337" font-size="19" fill="#385f7e">13 万亿日元国债中已使用部分</text>
+<text x="83" y="379" font-size="17" fill="#557995">另有 2.5674 万亿日元未用返还</text>
+<text x="83" y="433" font-size="16" fill="#54738d">来源：日本金融厅 2025 年报告</text>
+<text x="650" y="199" font-size="22" font-weight="bold" fill="#a15c40">B｜作者假设性税收测算</text>
+<text x="650" y="291" font-size="62" font-weight="bold" fill="#9f5435">≈ 38.8</text>
+<text x="650" y="337" font-size="19" fill="#985b46">97 × 40% = 38.8</text>
+<text x="650" y="379" font-size="17" fill="#a36e55">假设全部扣除且都能产生节税</text>
+<text x="650" y="433" font-size="16" fill="#a36e55">非已核实的税收损失或财政决算</text></g>
+<rect x="57" y="527" width="1086" height="98" rx="16" fill="#27364b"/>
+<text x="85" y="563" fill="#f2f8ff" font-family="sans-serif" font-size="20" font-weight="bold">A + B ≠ 已审计的财政净成本</text>
+<text x="85" y="593" fill="#c6d6e7" font-family="sans-serif" font-size="16">要先核对：法定税前扣除、银行实际盈利、亏损结转、最终资产回收及是否重复计数。</text>
+<text x="1136" y="650" fill="#718398" text-anchor="end" font-family="sans-serif" font-size="13">原创审计图｜官源：金融厅存款保险机构资料；假设来源：原书第三章</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 610" role="img" aria-label="金融机构失败时损失识别、维持支付系统、股东和高管责任、回收公开审计之间的不同决策步骤">
+<rect width="1200" height="610" rx="28" fill="#132238"/>
+<text x="55" y="72" fill="#f6f9ff" font-family="sans-serif" font-size="30" font-weight="bold">救金融功能，不等于无条件救经营者</text>
+<text x="57" y="112" fill="#b5cadd" font-family="sans-serif" font-size="17">将“银行出了问题”分解成可以分别审查的四个问题</text>
+<g font-family="sans-serif"><rect x="51" y="167" width="263" height="270" rx="20" fill="#244662" stroke="#80c0e4" stroke-width="2"/>
+<rect x="329" y="167" width="263" height="270" rx="20" fill="#285b57" stroke="#81cdb3" stroke-width="2"/>
+<rect x="607" y="167" width="263" height="270" rx="20" fill="#615039" stroke="#e8c382" stroke-width="2"/>
+<rect x="885" y="167" width="263" height="270" rx="20" fill="#554262" stroke="#c1a1df" stroke-width="2"/>
+<text x="77" y="209" font-size="22" font-weight="bold" fill="#c5eaff">① 看清损失</text>
+<text x="355" y="209" font-size="22" font-weight="bold" fill="#c4f8e1">② 维持功能</text>
+<text x="633" y="209" font-size="22" font-weight="bold" fill="#ffeac0">③ 明确责任</text>
+<text x="911" y="209" font-size="22" font-weight="bold" fill="#e7d4ff">④ 公开核算</text>
+<g font-size="18" fill="#f5f8ff">
+<text x="77" y="269">资产真实价值？</text><text x="77" y="312">坏账何时形成？</text><text x="77" y="355">风险被延后确认？</text>
+<text x="355" y="269">储户和客户权益</text><text x="355" y="312">已成交交易结算</text><text x="355" y="355">防范信用连锁冲击</text>
+<text x="633" y="269">股东的经营损失</text><text x="633" y="312">高管的法律责任</text><text x="633" y="355">监管的制度缺陷</text>
+<text x="911" y="269">赠与与资产购买</text><text x="911" y="312">回收与最终净成本</text><text x="911" y="355">公众能否复核？</text></g></g>
+<g fill="#a9c1d9"><polygon points="316,295 325,302 316,309"/><polygon points="594,295 603,302 594,309"/><polygon points="872,295 881,302 872,309"/></g>
+<rect x="52" y="473" width="1096" height="84" rx="16" fill="#20374e"/>
+<text x="77" y="506" fill="#e9f7ff" font-family="sans-serif" font-size="20" font-weight="bold">真正的风险管理：损失必须可见、成本必须分类、责任必须可审查。</text>
+<text x="77" y="534" fill="#bed5e8" font-family="sans-serif" font-size="16">这是公共政策分析框架，并非对每一位涉案人物的司法责任作出结论。</text>
+<text x="1134" y="595" fill="#7c93aa" font-family="sans-serif" font-size="13" text-anchor="end">原创示意｜参考日本银行 1997 年山一处置与金融厅破产处置报告</text>
+</svg>

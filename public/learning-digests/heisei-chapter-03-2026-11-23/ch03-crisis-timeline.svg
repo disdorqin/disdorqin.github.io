@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-label="日本1990年代金融危机事件时间轴：1996住专6850亿日元、1997山一证券自主停业、1998长银和日债银行临时国有化、1999收购协议、2000新生银行出售">
+<rect width="1200" height="650" rx="28" fill="#101d33"/>
+<text x="56" y="70" font-family="sans-serif" font-size="31" font-weight="bold" fill="#f5f9ff">坏账积累多年，处置却发生在几个关键节点</text>
+<text x="58" y="111" font-family="sans-serif" font-size="16" fill="#bdcce0">日本 1996—2000｜财政资金、市场失信、国有化与再出售是不同阶段</text>
+<path d="M120 313 H1114" fill="none" stroke="#6c849c" stroke-width="7" stroke-linecap="round"/>
+<g font-family="sans-serif" text-anchor="middle">
+<circle cx="145" cy="313" r="14" fill="#8db9eb"/><text x="145" y="283" font-size="22" font-weight="bold" fill="#d5eaff">1996</text>
+<circle cx="349" cy="313" r="14" fill="#d9b075"/><text x="349" y="283" font-size="22" font-weight="bold" fill="#ffe3b8">1997</text>
+<circle cx="559" cy="313" r="14" fill="#f28d90"/><text x="559" y="283" font-size="22" font-weight="bold" fill="#ffc5c7">1998</text>
+<circle cx="779" cy="313" r="14" fill="#b4a0e9"/><text x="779" y="283" font-size="22" font-weight="bold" fill="#e2d9ff">1999</text>
+<circle cx="990" cy="313" r="14" fill="#81ccb6"/><text x="990" y="283" font-size="22" font-weight="bold" fill="#c5f5e7">2000</text>
+<rect x="62" y="365" width="175" height="125" rx="14" fill="#24425f"/>
+<text x="149" y="402" font-size="18" font-weight="bold" fill="#f7fbff">住专问题</text><text x="149" y="432" font-size="16" fill="#daedff">财政方案</text><text x="149" y="458" font-size="17" fill="#bad8f4">6850 亿日元</text>
+<rect x="257" y="150" width="184" height="124" rx="14" fill="#635037"/>
+<text x="349" y="187" font-size="18" font-weight="bold" fill="#fff5e2">山一证券</text><text x="349" y="216" font-size="16" fill="#ffdfb5">11 月 24 日</text><text x="349" y="245" font-size="17" fill="#ffdfb5">宣布自主停业</text>
+<rect x="462" y="365" width="194" height="125" rx="14" fill="#6c393b"/>
+<text x="559" y="402" font-size="17" font-weight="bold" fill="#ffebec">长银 10 月 23 日</text><text x="559" y="432" font-size="17" fill="#ffd0d0">日债银行 12 月 13 日</text><text x="559" y="459" font-size="17" fill="#ffd0d0">临时国有化</text>
+<rect x="685" y="150" width="189" height="124" rx="14" fill="#51496e"/>
+<text x="779" y="187" font-size="18" font-weight="bold" fill="#f2ebff">Ripplewood</text><text x="779" y="216" font-size="16" fill="#e3daff">9 月 28 日</text><text x="779" y="245" font-size="16" fill="#e3daff">获优先谈判地位</text>
+<rect x="893" y="365" width="193" height="125" rx="14" fill="#285747"/>
+<text x="989" y="402" font-size="18" font-weight="bold" fill="#eafff4">长银出售</text><text x="989" y="431" font-size="16" fill="#c7f0e0">3 月完成</text><text x="989" y="458" font-size="16" fill="#c7f0e0">后更名新生银行</text>
+</g>
+<g stroke="#8093aa" stroke-width="2"><path d="M145 334V364"/><path d="M349 294V274"/><path d="M559 334V364"/><path d="M779 294V274"/><path d="M990 334V364"/></g>
+<rect x="57" y="533" width="1086" height="74" rx="15" fill="#1d3049"/>
+<text x="79" y="563" font-family="sans-serif" font-size="18" font-weight="bold" fill="#e6f4ff">不要混淆：不良贷款形成 → 市场失信 → 政府接管 → 重组出售。</text>
+<text x="79" y="588" font-family="sans-serif" font-size="14" fill="#aec3da">数据：会计检查院 1996；日本银行 1997-11-24；金融监督厅 1998；金融再生委员会 1999；IMF 2000。</text>
+</svg>
