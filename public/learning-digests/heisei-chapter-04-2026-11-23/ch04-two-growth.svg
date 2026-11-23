@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 625" role="img" aria-label="区分经济周期扩张与长期生产率和结构转型，说明真实的出口复苏不自动证明企业已获得新的长期竞争优势">
+<rect width="1200" height="625" rx="28" fill="#fafbfd"/>
+<text x="56" y="71" font-family="sans-serif" font-size="30" font-weight="bold" fill="#1b3049">短期盈利恢复，是问题的答案还是新一轮考题？</text>
+<text x="56" y="107" font-family="sans-serif" font-size="17" fill="#607489">经济周期与长期结构：需要分别观察和评价</text>
+<rect x="58" y="149" width="522" height="373" rx="22" fill="#e7f1fb" stroke="#8ebde6" stroke-width="2"/>
+<rect x="622" y="149" width="522" height="373" rx="22" fill="#e6f4eb" stroke="#94c7a5" stroke-width="2"/>
+<g font-family="sans-serif">
+<text x="88" y="197" fill="#2a608b" font-size="25" font-weight="bold">A｜周期扩张（已发生）</text>
+<text x="651" y="197" fill="#35764e" font-size="25" font-weight="bold">B｜长期转型（需要证明）</text>
+<rect x="98" y="225" width="438" height="64" rx="13" fill="#fff" stroke="#c5ddf0"/>
+<rect x="98" y="314" width="438" height="64" rx="13" fill="#fff" stroke="#c5ddf0"/>
+<rect x="98" y="403" width="438" height="64" rx="13" fill="#fff" stroke="#c5ddf0"/>
+<rect x="660" y="225" width="442" height="64" rx="13" fill="#fff" stroke="#c5e3cf"/>
+<rect x="660" y="314" width="442" height="64" rx="13" fill="#fff" stroke="#c5e3cf"/>
+<rect x="660" y="403" width="442" height="64" rx="13" fill="#fff" stroke="#c5e3cf"/>
+<g font-size="20" fill="#354b61">
+<text x="119" y="264">出口订单与生产增加</text><text x="119" y="353">企业销售额与利润改善</text><text x="119" y="442">景气周期持续 73 个月</text>
+<text x="681" y="264">生产率与技术扩散？</text><text x="681" y="353">新产品和服务价值？</text><text x="681" y="442">新市场与风险缓冲？</text>
+</g></g>
+<rect x="57" y="544" width="1088" height="55" rx="13" fill="#243850"/>
+<text x="80" y="579" fill="#f3f8fe" font-family="sans-serif" font-size="19" font-weight="bold">A 为真，不代表 B 一定为真；B 尚未充分证明，也不能否定 A 的真实价值。</text>
+</svg>

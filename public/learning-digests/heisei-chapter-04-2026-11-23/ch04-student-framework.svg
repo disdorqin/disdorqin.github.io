@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 605" role="img" aria-label="从短期市场热门程度到长期个人职业价值的分析流程，四步为识别收益来源、核对长期竞争力、检查周期风险、保留可迁移技能">
+<rect width="1200" height="605" rx="28" fill="#102138"/>
+<text x="56" y="71" font-family="sans-serif" font-size="29" font-weight="bold" fill="#f1f8ff">把经济复苏的判断，变成个人职业选择的四个问题</text>
+<text x="58" y="107" font-family="sans-serif" font-size="17" fill="#b5cce2">不是预测十年后的热门岗位，而是检查现在的收入依赖什么条件</text>
+<g font-family="sans-serif">
+<rect x="51" y="166" width="259" height="282" rx="19" fill="#234564" stroke="#7ec0e2" stroke-width="2"/>
+<rect x="331" y="166" width="259" height="282" rx="19" fill="#28584d" stroke="#83caae" stroke-width="2"/>
+<rect x="611" y="166" width="259" height="282" rx="19" fill="#5b4938" stroke="#e7bd86" stroke-width="2"/>
+<rect x="891" y="166" width="259" height="282" rx="19" fill="#4e4165" stroke="#c5a8ee" stroke-width="2"/>
+<text x="72" y="211" font-size="22" font-weight="bold" fill="#bde8ff">01 收益来源</text>
+<text x="352" y="211" font-size="22" font-weight="bold" fill="#cbffeb">02 核心能力</text>
+<text x="632" y="211" font-size="22" font-weight="bold" fill="#ffddb1">03 周期风险</text>
+<text x="912" y="211" font-size="22" font-weight="bold" fill="#e6d4ff">04 选择权</text>
+<g font-size="18" fill="#f3f7fe">
+<text x="72" y="272">真实客户需求？</text><text x="72" y="318">汇率或短期资金？</text><text x="72" y="363">政策优惠依赖？</text>
+<text x="352" y="272">技术是否难替代？</text><text x="352" y="318">是否能解决问题？</text><text x="352" y="363">产出能否被检验？</text>
+<text x="632" y="272">行业降温怎么办？</text><text x="632" y="318">收入是否太集中？</text><text x="632" y="363">债务是否可承受？</text>
+<text x="912" y="272">可迁移技能？</text><text x="912" y="318">作品与行业网络？</text><text x="912" y="363">调整路线的余地？</text></g></g>
+<g fill="#b6ccde"><polygon points="313,297 326,305 313,313"/><polygon points="593,297 606,305 593,313"/><polygon points="873,297 886,305 873,313"/></g>
+<rect x="54" y="490" width="1094" height="73" rx="17" fill="#20374f"/>
+<text x="80" y="521" fill="#edf7ff" font-family="sans-serif" font-size="19" font-weight="bold">阶段性成功应该被承认，也应该成为下一轮能力升级的起点。</text>
+<text x="80" y="548" fill="#c2d4e6" font-family="sans-serif" font-size="15">原创决策图：从原著“复苏与结构改革的错位”出发，并非对任何职业提供收益保证。</text>
+</svg>

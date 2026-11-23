@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-label="日本2002到2008年73个月景气扩张时间轴，标记2003至2004年35万亿日元外汇干预、2004年夏普龟山工厂、2005年邮政改革、2008年扩张结束">
+<rect width="1200" height="620" rx="28" fill="#152238"/>
+<text x="55" y="69" font-family="sans-serif" font-size="30" font-weight="bold" fill="#f2f8ff">73 个月的真实复苏，为何仍可能留下脆弱性？</text>
+<text x="56" y="111" font-family="sans-serif" font-size="16" fill="#c1d2e6">日本景气扩张：2002 年 1 月—2008 年 2 月（内阁府事后认定）</text>
+<rect x="70" y="171" width="1052" height="78" rx="16" fill="#224e55"/>
+<text x="97" y="206" font-family="sans-serif" font-size="22" font-weight="bold" fill="#dafff4">2002.01 — 2008.02</text><text x="97" y="235" font-family="sans-serif" font-size="16" fill="#bdebe2">长达 73 个月的景气扩张，不表示每一年增长速度或分配效果相同</text>
+<path d="M112 327 H1094" stroke="#7994af" stroke-width="6" stroke-linecap="round"/>
+<g font-family="sans-serif" font-size="18" text-anchor="middle">
+<circle cx="180" cy="327" r="13" fill="#71bde6"/><text x="180" y="303" fill="#d8f4ff" font-weight="bold">2002</text>
+<circle cx="435" cy="327" r="13" fill="#f1c279"/><text x="435" y="303" fill="#fff0d6" font-weight="bold">2003–04</text>
+<circle cx="687" cy="327" r="13" fill="#c1afe9"/><text x="687" y="303" fill="#eee5ff" font-weight="bold">2004–05</text>
+<circle cx="941" cy="327" r="13" fill="#f08f8f"/><text x="941" y="303" fill="#ffe4e4" font-weight="bold">2008</text>
+<rect x="84" y="374" width="196" height="103" rx="15" fill="#284769"/><text x="182" y="410" fill="#f7fbff">出口主导</text><text x="182" y="440" fill="#d4e8fb">扩张启动</text>
+<rect x="334" y="374" width="205" height="103" rx="15" fill="#655133"/><text x="435" y="406" fill="#fff9eb">外汇干预</text><text x="435" y="438" fill="#ffedd2">约 35 万亿日元</text>
+<rect x="584" y="374" width="209" height="103" rx="15" fill="#504568"/><text x="687" y="410" fill="#fff4ff">龟山建厂</text><text x="687" y="439" fill="#e3d5fc">邮政改革立法</text>
+<rect x="841" y="374" width="203" height="103" rx="15" fill="#683b3e"/><text x="940" y="406" fill="#fff3f3">全球危机</text><text x="940" y="438" fill="#fbd2d2">出口冲击</text></g>
+<rect x="57" y="511" width="1087" height="70" rx="15" fill="#203650"/>
+<text x="78" y="539" fill="#e6f2ff" font-family="sans-serif" font-size="17" font-weight="bold">景气扩张 ≠ 生产率改革成功；但也绝不等于增长是“假数据”。</text>
+<text x="78" y="564" fill="#bacfe4" font-family="sans-serif" font-size="14">来源：日本内阁府 ESRI 景气基准日付、IMF 2004、夏普官方史料、金融厅邮政民营化年表。</text>
+</svg>
