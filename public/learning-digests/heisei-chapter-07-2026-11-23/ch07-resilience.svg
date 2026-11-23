@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-label="从国家灾害风险到大学生与家庭恢复力的四步框架，识别依赖、备份、恢复、证据更新，并强调公共制度和个人准备共同重要">
+<rect width="1200" height="600" rx="27" fill="#142239"/>
+<text x="56" y="70" font-family="sans-serif" font-size="29" font-weight="700" fill="#f5f9ff">风险永远无法归零，恢复力需要提前建设</text>
+<text x="58" y="110" font-family="sans-serif" font-size="17" fill="#b8cfe0">从工程系统的冗余，延伸到学习、职业与家庭决策的可恢复性</text>
+<g font-family="sans-serif">
+<rect x="50" y="164" width="262" height="292" rx="20" fill="#264664" stroke="#80c1e1" stroke-width="2"/>
+<rect x="328" y="164" width="262" height="292" rx="20" fill="#29584e" stroke="#87d1aa" stroke-width="2"/>
+<rect x="606" y="164" width="262" height="292" rx="20" fill="#624935" stroke="#e1b88c" stroke-width="2"/>
+<rect x="884" y="164" width="264" height="292" rx="20" fill="#504565" stroke="#bea6e1" stroke-width="2"/>
+<text x="75" y="209" font-size="21" font-weight="bold" fill="#bbe7ff">01 关键依赖</text>
+<text x="353" y="209" font-size="21" font-weight="bold" fill="#c8ffea">02 共同风险</text>
+<text x="631" y="209" font-size="21" font-weight="bold" fill="#ffdfb9">03 恢复准备</text>
+<text x="909" y="209" font-size="21" font-weight="bold" fill="#ebdbff">04 持续复盘</text>
+<g font-size="18" fill="#f5f9ff">
+<text x="75" y="263">电力、通信、交通</text><text x="75" y="307">家庭收入与健康</text><text x="75" y="351">重要科研与个人资料</text>
+<text x="353" y="263">是否共用同一设施？</text><text x="353" y="307">备份能否同时失效？</text><text x="353" y="351">最坏情景的影响？</text>
+<text x="631" y="263">应急信息与安全方案</text><text x="631" y="307">可靠备份与现金缓冲</text><text x="631" y="351">可迁移的职业能力</text>
+<text x="909" y="263">实际测试与审查</text><text x="909" y="307">更新依据和条件</text><text x="909" y="351">及时修正计划</text></g></g>
+<g fill="#b3c9dc"><polygon points="314,307 323,315 314,323"/><polygon points="592,307 601,315 592,323"/><polygon points="870,307 879,315 870,323"/></g>
+<rect x="53" y="489" width="1095" height="73" rx="15" fill="#21394f"/>
+<text x="77" y="522" font-family="sans-serif" font-size="19" font-weight="bold" fill="#f1f8ff">个人不能替代公共安全制度；公共制度也不能代替基本的个人准备。</text>
+<text x="77" y="546" font-family="sans-serif" font-size="14" fill="#bfd4e6">原创生活决策示意，非专业核事故应急、财务或医疗建议。</text>
+</svg>

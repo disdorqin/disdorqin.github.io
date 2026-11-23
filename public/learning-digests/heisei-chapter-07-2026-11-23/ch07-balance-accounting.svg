@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-label="2011年日本商品贸易逆差与经常项目顺差的统计口径。按原著两个月贸易差额比较得约负1.5829万亿日元，不能认为等同于GDP损失；2011年全年商品贸易逆差约2.565万亿。">
+<rect width="1200" height="620" rx="27" fill="#fafbfe"/>
+<text x="53" y="72" font-family="sans-serif" font-size="30" font-weight="700" fill="#1e324a">贸易差额恶化，不等于国民经济损失同额</text>
+<text x="55" y="108" font-family="sans-serif" font-size="16" fill="#64788e">区分：月度差额的变化、年度商品贸易、经常项目和 GDP</text>
+<rect x="55" y="147" width="519" height="323" rx="21" fill="#e7f1fb" stroke="#92bbe0" stroke-width="2"/>
+<rect x="625" y="147" width="519" height="323" rx="21" fill="#eef4e8" stroke="#aecf97" stroke-width="2"/>
+<g font-family="sans-serif">
+<text x="82" y="190" font-size="23" font-weight="700" fill="#2d5e8a">两个不同月份的贸易差额</text>
+<text x="82" y="252" font-size="20" fill="#325c7b">灾前某月 +0.7292 万亿日元</text>
+<text x="82" y="298" font-size="20" fill="#325c7b">灾后某月 −0.8537 万亿日元</text>
+<path d="M83 321 H526" stroke="#a3c3dd" stroke-width="2"/>
+<text x="82" y="366" font-size="26" font-weight="bold" fill="#2e5f8a">变化 −1.5829 万亿</text>
+<text x="82" y="419" font-size="16" fill="#577996">不是 GDP、不是灾害经济净损失</text>
+<text x="651" y="190" font-size="23" font-weight="700" fill="#507a38">2011 年官方全年商品贸易</text>
+<text x="651" y="279" font-size="58" font-weight="bold" fill="#4a7935">−2.565</text>
+<text x="651" y="326" font-size="20" fill="#547c44">万亿日元｜商品贸易逆差</text>
+<text x="651" y="378" font-size="17" fill="#648456">经常项目还包括服务和收入等项目</text>
+<text x="651" y="416" font-size="16" fill="#648456">外部投资收入仍能支持经常项目顺差</text></g>
+<rect x="55" y="503" width="1089" height="78" rx="14" fill="#25384f"/>
+<text x="79" y="535" font-family="sans-serif" font-size="19" font-weight="bold" fill="#f3f8ff">货物出口 − 货物进口 = 商品贸易差额；“流量的变化” ≠ “总产出损失”。</text>
+<text x="79" y="559" font-family="sans-serif" font-size="13" fill="#c9d9e8">来源：原著第七章例示月份、日本财务省统计经正式政府文件引用、IMF 2011 日本磋商。</text>
+</svg>

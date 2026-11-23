@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 610" role="img" aria-label="日本2011年3月11日大地震与福岛核电事故传导示意，从14点46分地震、海啸、厂区供电中断到冷却困难与后续撤离。">
+<rect width="1200" height="610" rx="28" fill="#142238"/>
+<text x="52" y="72" font-family="sans-serif" font-size="30" font-weight="700" fill="#f2f8ff">一次外生灾难，怎样突破多道工程防线？</text>
+<text x="54" y="111" font-family="sans-serif" font-size="16" fill="#bbcee0">2011 年 3 月 11 日起｜灾难发生顺序与事故机制，不代表所有情景后果必然发生</text>
+<g font-family="sans-serif">
+<rect x="53" y="176" width="255" height="281" rx="20" fill="#254360" stroke="#79bcdf" stroke-width="2"/>
+<rect x="335" y="176" width="255" height="281" rx="20" fill="#5b4b33" stroke="#dec283" stroke-width="2"/>
+<rect x="617" y="176" width="255" height="281" rx="20" fill="#604047" stroke="#df9fa5" stroke-width="2"/>
+<rect x="899" y="176" width="248" height="281" rx="20" fill="#364960" stroke="#9faecd" stroke-width="2"/>
+<text x="76" y="219" font-size="22" font-weight="bold" fill="#b6e5ff">① 14:46 地震</text><text x="358" y="219" font-size="22" font-weight="bold" fill="#fff0c6">② 巨大海啸</text><text x="640" y="219" font-size="22" font-weight="bold" fill="#ffd5da">③ 电源失效</text><text x="922" y="219" font-size="21" font-weight="bold" fill="#e1edff">④ 多重后果</text>
+<g font-size="18" fill="#f7f9ff"><text x="76" y="268">东北近海 M9.0</text><text x="76" y="308">运行机组自动停堆</text><text x="76" y="349">外部供电受损</text>
+<text x="358" y="268">海啸冲击沿海社区</text><text x="358" y="308">厂区部分设备浸水</text><text x="358" y="349">损坏关键保障设施</text>
+<text x="640" y="268">多台应急电源丧失</text><text x="640" y="308">冷却和仪控受影响</text><text x="640" y="349">需要紧急应对</text>
+<text x="922" y="268">堆芯熔毁</text><text x="922" y="308">氢气爆炸和释放</text><text x="922" y="349">疏散、能源冲击</text></g>
+</g>
+<g fill="#b3c5d5"><polygon points="311,303 330,316 311,329"/><polygon points="593,303 612,316 593,329"/><polygon points="875,303 894,316 875,329"/></g>
+<rect x="52" y="489" width="1095" height="75" rx="15" fill="#21364d"/>
+<text x="79" y="519" font-family="sans-serif" font-size="19" font-weight="bold" fill="#eef7ff">多套备用设施若暴露在同一海啸风险中，就可能出现共同原因失效。</text>
+<text x="79" y="547" font-family="sans-serif" font-size="14" fill="#bdd0e2">来源：日本气象厅、复兴厅、IAEA 福岛事故调查、东京电力公开说明。</text>
+</svg>
